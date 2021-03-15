@@ -1,9 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+ <%  
+   String mName = (String)request.getAttribute("loginname");
+   String lName = (String)request.getAttribute("loginname");
+%> 
 <%  
 	String loginname = (String)session.getAttribute("loginname");
 %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,14 +43,24 @@
 	<body style="overflow-x:hidden; overflow-y:scroll;"> 
 		<header>
 			<!-- 메인로고 -->
+			
 			<div class="headerimg">
 				<a href="<%= request.getContextPath() %>/Common/main.do">
 				<img class="img1" src="<%= request.getContextPath() %>/webimage/edupick2.jpg">	
 				</a>
 			</div>
-			<div class="logoutdiv">
-				<%= loginname %> <a href="#">로그아웃</a><img src="<%= request.getContextPath() %>/webimage/알림.png" style="width:10%; height:10%;">
-			</div>
+			
+			
+			<c:if test="${not empty sessionScope.loginname && userType =='M'|| userType=='L' || userType=='A'}">
+				<div class="logoutdiv">
+					<%= loginname %> <a href="<%= request.getContextPath() %>/Common/logout.do">로그아웃</a><img src="<%= request.getContextPath() %>/webimage/알림.png" style="width:10%; height:10%;">
+				</div>
+			</c:if>
+			<c:if test="${empty sessionScope.loginname}">
+				<div class="lognbt" id="loginbtnmain">
+					<a href="<%= request.getContextPath() %>/Common/login.do">로그인</a><br>
+				</div>
+			</c:if>
 			<!-- 검색 폼 -->
 			<form class="frmsh">
 				<!-- 검색박스 -->

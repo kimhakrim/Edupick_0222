@@ -127,13 +127,14 @@ public class CommonController extends HttpServlet{
             
             LicenseeDao ld = new LicenseeDao();
             int value2 = ld.loginCheck(lId, lPwd);
-         //   System.out.println("value2-"+value2);
+          System.out.println("value2-"+value2);
             
             if(value2 != 0) {               
                String lName = ld.getName(lId, lPwd);
                session.setAttribute("loginname", lName);
                session.setAttribute("lId" , lId);
                session.setAttribute("userType", "L");
+               session.setAttribute("userType", "A");
                response.sendRedirect(request.getContextPath()+"/Common/main.do"); // 로그인화면으로 리다이렉트         
             }else {
                response.setContentType("text/html; charset=UTF-8");

@@ -511,7 +511,6 @@
 						<img src="<%= request.getContextPath() %>/webimage/user.png" name = loginname id="userimg1"><%=loginname %> 님 
 						<img src="<%= request.getContextPath() %>/webimage/login4.jpg" id="userimg2">						
 						<button type="button" onclick="location.href='<%= request.getContextPath() %>/Common/logout.do'" style="background:white;">로그아웃</button><br>
-						<a href="<%= request.getContextPath() %>/Admin/admin.do">관리하기</a>
 						<a href="<%= request.getContextPath() %>/Common/Modify.do" id="modify">회원정보 수정</a><img src="<%= request.getContextPath() %>/webimage/login3.jpg" style="width:10%; height:20%;">
 					</div>
 					<div class="lofer2">
@@ -536,7 +535,7 @@
 				</div>
 				</c:if>
 				
-				<c:if test="${not empty sessionScope.loginname && userType == 'L'}">
+				<c:if test="${not empty sessionScope.loginname && userType == 'L' || userType =='A'}">
 				<div class="imgbanner">
 					<img src="<%= request.getContextPath() %>/webimage/event11.jpg" id="img5">
 					<img src="<%= request.getContextPath() %>/webimage/event22.jpg" id="img5_2">

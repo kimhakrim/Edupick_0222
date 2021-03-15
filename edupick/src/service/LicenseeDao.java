@@ -65,7 +65,8 @@ public class LicenseeDao {
 	      
 	   }
 	public int loginCheck(String lId, String lPwd) {
-		
+	System.out.println("lId->>>>>" + lId);
+	System.out.println("lPwd->>>>>>"+lPwd);
 		int value2 = 0;
 		try {
 		String sql = "select count(*) as cnt from licensee where lid = ? and lpwd = ?" ;
@@ -80,7 +81,7 @@ public class LicenseeDao {
 		}catch(Exception e) {
 			System.out.println("해당하는 사람이 존재하지 않습니다.");
 		}
-	//	System.out.println("value->"+value2);
+		System.out.println("value logincheck->"+value2);
 		return value2;
 }
 public String getName(String lName, String lPwd) {

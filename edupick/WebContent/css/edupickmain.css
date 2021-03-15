@@ -213,3 +213,11 @@ article {
 	position:absolute;
 	top:310px;
 }	
+
+#loginbtnmain {
+	position:relative;
+	margin-top:0px;
+	width:50px;
+	left:85%;
+	bottom:70px;
+}

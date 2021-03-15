@@ -36,8 +36,7 @@ import javax.servlet.http.HttpServletResponse;
 				RequestDispatcher rd = request.getRequestDispatcher("/jsp/noticedetail.jsp");
 				rd.forward(request, response);	
 		
-			}		
-			
+			}
 		}
 	
 
