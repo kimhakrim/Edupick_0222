@@ -21,36 +21,6 @@ public class LicenseeVo {
 	private String loutyn;
 	private String ldelyn;
 	
-	public int getLidx() {
-		return lidx;
-	}
-	public void setLidx(int lidx) {
-		this.lidx = lidx;
-	}
-	public String getLid() {
-		return lid;
-	}
-	public void setLid(String lid) {
-		this.lid = lid;
-	}
-	public String getLname() {
-		return lname;
-	}
-	public void setLname(String lname) {
-		this.lname = lname;
-	}
-	public String getLpwd() {
-		return lpwd;
-	}
-	public void setLpwd(String lpwd) {
-		this.lpwd = lpwd;
-	}
-	public String getLjumin() {
-		return ljumin;
-	}
-	public void setLjumin(String ljumin) {
-		this.ljumin = ljumin;
-	}
 	public String getLpostcode() {
 		return lpostcode;
 	}
@@ -81,6 +51,45 @@ public class LicenseeVo {
 	public void setLextraaddr(String lextraaddr) {
 		this.lextraaddr = lextraaddr;
 	}
+	private String lgrade;
+	
+	public int getLidx() {
+		return lidx;
+	}
+	public String getLgrade() {
+		return lgrade;
+	}
+	public void setLgrade(String lgrade) {
+		this.lgrade = lgrade;
+	}
+	public void setLidx(int lidx) {
+		this.lidx = lidx;
+	}
+	public String getLid() {
+		return lid;
+	}
+	public void setLid(String lid) {
+		this.lid = lid;
+	}
+	public String getLname() {
+		return lname;
+	}
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+	public String getLpwd() {
+		return lpwd;
+	}
+	public void setLpwd(String lpwd) {
+		this.lpwd = lpwd;
+	}
+	public String getLjumin() {
+		return ljumin;
+	}
+	public void setLjumin(String ljumin) {
+		this.ljumin = ljumin;
+	}
+	
 	public String getLemail() {
 		return lemail;
 	}
@@ -123,13 +132,13 @@ public class LicenseeVo {
 	public void setLoutyn(String loutyn) {
 		this.loutyn = loutyn;
 	}
+	
 	public String getLdelyn() {
 		return ldelyn;
 	}
 	public void setLdelyn(String ldelyn) {
 		this.ldelyn = ldelyn;
 	}
-	
 	
 	
 	

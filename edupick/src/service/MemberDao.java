@@ -1,17 +1,10 @@
 package service;
 
-import java.io.IOException; 
-import java.sql.Connection;  
+import java.sql.Connection; 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 
 import dbconn.DBconn;
 
@@ -65,8 +58,7 @@ public class MemberDao {
 		System.out.println("sql->"+exec);
 		return exec;
 		
-	}
-	public int loginCheck(String mId, String mPwd) {
+	}public int loginCheck(String mId, String mPwd) {
 		System.out.println(mId);
 		System.out.println(mPwd);	
 			int value = 0;
@@ -75,7 +67,6 @@ public class MemberDao {
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, mId);
 				pstmt.setString(2, mPwd);
-				
 				ResultSet rs = pstmt.executeQuery(); 
 				
 				if(rs.next()) {
@@ -101,39 +92,59 @@ public class MemberDao {
 			
 			if(rs.next()) {
 			name = rs.getString("mname");
-		
 			}
 		}catch(Exception e) {
 			System.out.println("해당하는 사람이 존재하지 않습니다.");
 		}
 		return name;
 	}
-	
-	public ArrayList memberLogin(String mId, String mPwd) {
-	      
-	      String sql = "select mgrade, midx from member where mid = ? and mpwd =?";	      
-	      
-	      ArrayList value = new ArrayList();
-	      try {
-	         pstmt = conn.prepareStatement(sql);
-	         pstmt.setString(1, mId);
-	         pstmt.setString(2, mPwd);
-	         ResultSet rs = pstmt.executeQuery();
-	         
-	         if (rs.next()) {
-	            value.add(rs.getString("mgrade"));
-	            value.add(rs.getInt("midx"));
-	         }   
-	         
-	      }catch(Exception e) {
-	         e.printStackTrace();
-	      }
-	      
-	      return value; 
-	      
-	   }
-	//id 체크
-		
+
+	//아이디 찾기
+//	public String findId(String mName, String mTel) {
+//		
+//		String id = null;
+//		
+//		try {
+//			String sql = "select mid from edupickmember where mname=? and mtel=?";
+//			pstmt = conn.prepareStatement(sql);
+//			pstmt.setString(1, mName);
+//			pstmt.setString(2, mTel);
+//			
+//			System.out.println("mName======="+mName);
+//			System.out.println("mTel========="+mTel);
+//			
+//			ResultSet rs = pstmt.executeQuery();
+//		
+//		}catch(SQLException e) {
+//			e.printStackTrace();
+//		}
+//		return id; 
+//	}
+//	public String findPwd(String mId, String mName, String mJumin) {
+//		
+//		String pwd = null;
+//		
+//		try {
+//			String sql = "select mpwd from edupickmember where mid=? and mname=? and mjumin=?";
+//			pstmt = conn.prepareStatement(sql);
+//			pstmt.setString(1, mId);
+//			pstmt.setString(2, mName);
+//			pstmt.setString(3, mJumin);
+//			
+//			System.out.println("mId======="+ mId);
+//			System.out.println("mName========="+ mName);
+//			System.out.println("mJumin========="+ mJumin);
+//			ResultSet rs = pstmt.executeQuery();
+//		
+//			
+//		
+//		}catch(SQLException e) {
+//			e.printStackTrace();
+//		}
+//		return pwd; 
+//	}
+//id 체크
+
 	public boolean checkId(String id){
 
 		boolean b = false;
@@ -145,7 +156,7 @@ public class MemberDao {
 					"select lid from licensee \r\n" + 
 					") where id= ?";
 					
-	
+		//	"select mid from edupickmember where mid = ?";
 					
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
@@ -174,9 +185,7 @@ public class MemberDao {
 
 		return b;
 
-	}
-	
-	public String findId(String mName, String mTel) {
+	}public String findId(String mName, String mTel) {
 		
 		String id = null;
 		try {
@@ -194,8 +203,7 @@ public class MemberDao {
 		}
 		return id;
 	
-	}
-	public String findPwd(String mId, String mName, String mJumin) {
+	}public String findPwd(String mId, String mName, String mJumin) {
 		
 		String pwd = null;
 		try {
@@ -215,68 +223,67 @@ public class MemberDao {
 		}
 		return pwd;
 	
+	}   public MemberVo getInForm(String mId) {
+	      MemberVo mv = null;
+	      
+	      try {
+	         String sql = "select * from edupickmember where mid =?";
+	         //String sql2 = "select"
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setString(1, mId);
+	         ResultSet rs = pstmt.executeQuery();      
+	         if(rs.next()) {
+	            mv = new MemberVo();
+	            mv.setMidx(rs.getInt("midx"));
+	            mv.setMid(rs.getString("mid"));
+	            mv.setMpwd(rs.getString("mpwd"));
+	            mv.setMname(rs.getString("mname"));
+	            mv.setMjumin(rs.getString("mjumin"));
+	            mv.setMtel(rs.getString("mtel"));
+	            mv.setMemail(rs.getString("memail"));
+	            mv.setMpostcode(rs.getString("mpostcode"));
+	            mv.setMroadaddr(rs.getString("mroadaddr"));
+	            mv.setMjibunaddr(rs.getString("mjibunaddr"));
+	            mv.setMdetailaddr(rs.getString("mdetailaddr"));
+	            mv.setMextraaddr(rs.getString("mextraaddr"));
+	         }
+	         
+	         }catch (Exception e){
+	            e.printStackTrace();
+	         }
+	         return mv ;
+	         
+	   
+	         }
+	         public int memberModify(int midx, String mPwd, String mPostCode, String mRoadAddr, String mJibunAddr, String mDetailAddr, String mExtraAddr, String mEmail, String mTel ) {
+	            
+	            int value =0;
+	            
+	            try {
+	                  String sql = "update edupickmember set mpwd=? , mpostcode =?, mroadaddr =?, mjibunaddr=? , mdetailaddr=? , mextraaddr =?, memail=? ,mtel = ?"
+	                              +"where midx=?";
+	                  
+	                  
+	                  pstmt = conn.prepareStatement(sql);
+	                  pstmt.setString(1, mPwd );
+	                  pstmt.setString(2, mPostCode);
+	                  pstmt.setString(3, mRoadAddr);
+	                  pstmt.setString(4, mJibunAddr);
+	                  pstmt.setString(5, mDetailAddr);
+	                  pstmt.setString(6, mExtraAddr);
+	                  pstmt.setString(7, mEmail);
+	                  pstmt.setString(8, mTel);
+	                  pstmt.setInt(9, midx);
+	                  value = pstmt.executeUpdate();
+	                  
+	            }catch(Exception e) {
+	               e.printStackTrace();
+	            }finally {
+	               try {pstmt.close(); }catch(SQLException s) {}
+	               try {conn.close();}catch(SQLException s) {}
+	            }   
+	            return value;
+	         }
 	}
-	public MemberVo getInForm(String mId) {
-		MemberVo mv = null;
-		
-		try {
-			String sql = "select * from edupickmember where mid =?";
-			//String sql2 = "select"
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, mId);
-			ResultSet rs = pstmt.executeQuery();		
-			if(rs.next()) {
-				mv = new MemberVo();
-				mv.setMidx(rs.getInt("midx"));
-				mv.setMid(rs.getString("mid"));
-				mv.setMpwd(rs.getString("mpwd"));
-				mv.setMname(rs.getString("mname"));
-				mv.setMjumin(rs.getString("mjumin"));
-				mv.setMtel(rs.getString("mtel"));
-				mv.setMemail(rs.getString("memail"));
-				mv.setMpostcode(rs.getString("mpostcode"));
-				mv.setMroadaddr(rs.getString("mroadaddr"));
-				mv.setMjibunaddr(rs.getString("mjibunaddr"));
-				mv.setMdetailaddr(rs.getString("mdetailaddr"));
-				mv.setMextraaddr(rs.getString("mextraaddr"));
-			}
-			
-			}catch (Exception e){
-				e.printStackTrace();
-			}
-			return mv ;
-			
-	
-			}
-			public int memberModify(int midx, String mPwd, String mPostCode, String mRoadAddr, String mJibunAddr, String mDetailAddr, String mExtraAddr, String mEmail, String mTel ) {
-				
-				int value =0;
-				
-				try {
-						String sql = "update edupickmember set mpwd=? , mpostcode =?, mroadaddr =?, mjibunaddr=? , mdetailaddr=? , mextraaddr =?, memail=? ,mtel = ?"
-										+"where midx=?";
-						
-						
-						pstmt = conn.prepareStatement(sql);
-						pstmt.setString(1, mPwd );
-						pstmt.setString(2, mPostCode);
-						pstmt.setString(3, mRoadAddr);
-						pstmt.setString(4, mJibunAddr);
-						pstmt.setString(5, mDetailAddr);
-						pstmt.setString(6, mExtraAddr);
-						pstmt.setString(7, mEmail);
-						pstmt.setString(8, mTel);
-						pstmt.setInt(9, midx);
-						value = pstmt.executeUpdate();
-						
-				}catch(Exception e) {
-					e.printStackTrace();
-				}finally {
-					try {pstmt.close(); }catch(SQLException s) {}
-					try {conn.close();}catch(SQLException s) {}
-				}	
-				return value;
-			}
-}
-				
-			
+	            
+

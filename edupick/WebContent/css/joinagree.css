@@ -56,17 +56,19 @@ input[type=text]{
 	margin-left:30%;
 	margin-top:3%;
 }
-#agbtn01 {
+#agbtn01 , #agbtn02{
 	font-size:20px;
 	border:1px solid gray;
 	background:gray;
 	color:white;
 	margin-left:530px;
 }
-#agbtn02 {
-	font-size:20px;
-	border:1px solid gray;
-	background:gray;
-	color:white;
-	margin-left:530px;
+
+header {
+	margin-top:0px;
+	height:270px;
+}
+
+#topmenumain {
+	margin-top:100px;
 }

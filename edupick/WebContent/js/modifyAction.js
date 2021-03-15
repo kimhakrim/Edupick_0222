@@ -1,5 +1,5 @@
 ﻿function inputCheck02(){
-	alert("test");
+   alert("test");
 
    if (document.regFrm02.modipwd.value == "") {
         alert("비밀번호를 입력해 주세요.");
@@ -25,26 +25,26 @@
     }
     
     if(document.regFrm02.sample4_postcode.value =="" || document.regFrm02.sample4_detailAddress.value ==""){
-    	alert("주소를 입력해주세요.");
-    	document.regFrm02.sample4_postcode.focus();
-    	
+       alert("주소를 입력해주세요.");
+       document.regFrm02.sample4_postcode.focus();
+       
     }
     
     if(document.regFrm02.phone2.value =="" || document.regFrm02.phone3.value ==""){
-    	alert("핸드폰 번호를 입력해주세요.");
-    	document.regFrm02.sample4_postcode.focus();
-    	
+       alert("핸드폰 번호를 입력해주세요.");
+       document.regFrm02.sample4_postcode.focus();
+       
     }
      
-     document.regFrm02.method="post";	
+     document.regFrm02.method="post";   
      document.regFrm02.action = "/edupick/Licensee/licenseeModifyAction.do";
-	 document.regFrm02.submit();
-	 return;
+    document.regFrm02.submit();
+    return;
 }
 
 function inputCheck01(){
-	
-	if (document.regFrm01.modipwd.value == "") {
+   
+   if (document.regFrm01.modipwd.value == "") {
         alert("비밀번호를 입력해 주세요.");
         document.regFrm01.modipwd.focus();
         return;
@@ -68,22 +68,22 @@ function inputCheck01(){
     }
     
     if(document.regFrm01.sample4_postcode.value =="" || document.regFrm01.sample4_detailAddress.value ==""){
-    	alert("주소를 입력해주세요.");
-    	document.regFrm01.sample4_postcode.focus();
-    	
+       alert("주소를 입력해주세요.");
+       document.regFrm01.sample4_postcode.focus();
+       
     }
     
     if(document.regFrm01.phone2.value =="" || document.regFrm01.phone3.value ==""){
-    	alert("핸드폰 번호를 입력해주세요.");
-    	document.regFrm01.sample4_postcode.focus();
-    	
+       alert("핸드폰 번호를 입력해주세요.");
+       document.regFrm01.sample4_postcode.focus();
+       
     }
      
-     document.regFrm01.method="post";	
+     document.regFrm01.method="post";   
      document.regFrm01.action = "/edupick/Member/memberModifyAction.do";
-	 document.regFrm01.submit();
-	 return;
+    document.regFrm01.submit();
+    return;
 }
 
-	
-	
+   
+   

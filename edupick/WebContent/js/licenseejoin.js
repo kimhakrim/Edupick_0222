@@ -48,20 +48,20 @@
         return;
     }
  
-    if (document.regFrm.sample4_postcode.value == "") {
+	if (document.regFrm.sample4_postcode.value == "") {
         alert("우편번호를 검색해 주세요.");
         return;
     }
 	
 	if (document.regFrm.lTel1.value == "") {
         alert("핸드폰 번호를 입력해 주세요.");
-		document.regFrm.lTel2.focus();
+		document.regFrm.lTel1.focus();
         return;
     }
 	
 	if (document.regFrm.lTel2.value == "") {
         alert("핸드폰 번호를 입력해 주세요.");
-		document.regFrm.lTel3.focus();
+		document.regFrm.lTel2.focus();
         return;
     }
 	
@@ -94,7 +94,6 @@
 	document.regFrm.enctype="multipart/form-data";
     document.regFrm.submit();
 }
-
 function checkid() {
 	if(regFrm.lId.value == "") {
 

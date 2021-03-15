@@ -1,8 +1,8 @@
 ﻿.addfrm {
 	width:1400px;
-	height:750px;
+	height:700px;
 	position:relative;
-	top:280px;
+	top:200px;
 	left:350px;
 }
 .addimg{
@@ -104,17 +104,38 @@ select {
 }
 
 .subbtn{
-	position:relative;
+	position:absolute;
 	top:220px;
 	left:240px;
 	zoom:2.5;
 	width:100px;
 	height:50px;
+	text-align:center;
 }
 .subbtn > button {
 	background:white;
 	border:1px solid black;
-	position:relative;
-	bottom:40px;
-	left:15px;
+}
+
+.subnav3{
+	border-right:1px solid gray;
+	background:#BDBDBD;
+	width:245px;
+	height:80px;
+	float:left;
+	text-align:center;
+	font-size:25px;
+	line-height:70px;
+	cursor:pointer;
+	border:1px solid black;
+}
+
+.adminmenu4{
+	height:480px;
+	width:245px;
+	position:absolute;
+	top:560px;
+	left:-240px;
+	margin-left:238px;
+	border:1px solid gray;
 }

@@ -1,18 +1,21 @@
-﻿.visitfrm {
+﻿article {
+	height:880px;
+}
+
+.visitfrm {
 	border:1px solid white;
-	width:1200px;
-	height:730px;
+	width:250px;
+	height:600px;
 	text-align:center;
 	position:relative;
-	top:250px;
-	left:400px;
+	top:150px;
+	left:800px;
 }
 
 .visitdiv {
 	border:1px solid black;
 	width:250px;
 	padding:left:-20px;
-	margin-left:500px;
 	margin-top:50px;
 }
 
@@ -42,7 +45,7 @@ li:nth-child(odd) {
 	background:white;
 	border:1px solid black;
 	margin-top:10px;
-	margin-left:35px;
+	margin-left:5px;
 }
 
 input[name=inputaline] {

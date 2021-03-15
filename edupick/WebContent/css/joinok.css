@@ -66,3 +66,12 @@ form[name=joincp] > div > a:active{
 [name=joincoac]{
 	height:800px;
 }
+
+header {
+	margin-top:0px;
+	height:270px;
+}
+
+#topmenumain {
+	margin-top:100px;
+}

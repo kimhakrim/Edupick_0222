@@ -30,10 +30,16 @@ public class InstituteController extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/jsp/institute.jsp");
 			rd.forward(request, response);						
 		
-		}else if(str.equals("/Institute/institutedetail.do")) {
+		}else if(str.equals("/Institute/instituteDetail.do")) {
 			
 					
-			RequestDispatcher rd = request.getRequestDispatcher("/jsp/institutedetail.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/jsp/instituteDetail.jsp");
+			rd.forward(request, response);						
+		
+		}else if(str.equals("/Institute/progresslecture.do")) {
+			
+					
+			RequestDispatcher rd = request.getRequestDispatcher("/jsp/progresslecture.jsp");
 			rd.forward(request, response);						
 		
 		}

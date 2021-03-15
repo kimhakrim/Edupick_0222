@@ -20,35 +20,34 @@
 		<link href="<%= request.getContextPath() %>/css/rp.css" rel="stylesheet" type="text/css" />	
 		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
       	<script src="<%= request.getContextPath() %>/js/address.js"></script>
+      	<link href="<%= request.getContextPath() %>/css/error.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body style="overflow-x:hidden;"> 
-		<header style="overflow-x:hidden;">
+		<header>
 			<div class="headerimg">
 				<a href="<%= request.getContextPath() %>/Common/main.do">
 				<img class="img1" src="<%= request.getContextPath() %>/webimage/edupick2.jpg">	
 				</a>
 			</div>
-			<hr class="hr03" style="border:1px solid #BDBDBD;" role="presentation" />
 			<div id="topmenumain">
-				<ul id="topmenu">
-					<li style="margin-left:-5%;">
-						<a href="<%= request.getContextPath() %>/Institute/Institute.do" class="menua">학원찾기</a>
+				<ul>
+					<li>
+						<a href="<%= request.getContextPath() %>/Institute/institute.do" class="menua">학원찾기</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Notice/notice.do" class="menua">공지사항</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Eduinformation/eduinformation.do" class="menua">교육정보</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Customerservice/customerservice.do" class="menua">고객센터</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Myservice/myservice.do" class="menua">My 서비스</a>
 					</li>
 				</ul>
 			</div>
-			<hr class="hr01" style="border:1px solid #F2F2F2;"/>
 		</header>
 		<section>
 			<article name="joinate">
@@ -127,7 +126,7 @@
                           			<input type="text" id="sample4_jibunAddress" name="sample4_jibunAddress" readonly placeholder="지번주소"><br>
                           			<span id="guide" name="guide" style="color:#999;display:none"></span>
                           			<input type="text" id="sample4_detailAddress" name="sample4_detailAddress" placeholder="상세주소">
-                           			<input type="text" id="sample4_extraAddress" name="sample4_extraAddress" readonly placeholder="참고항목">									
+                           			<input type="text" id="sample4_extraAddress" name="sample4_extraAddress" placeholder="참고항목">									
                                 </td>
 							</tr>
 							<tr>

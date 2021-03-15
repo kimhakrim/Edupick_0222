@@ -121,23 +121,6 @@ import javax.servlet.http.HttpServletResponse;
 			rd.forward(request, response);	
 		
 		
-		}else if(str.equals("/Admin2/admin.do")) {
-			
-			RequestDispatcher rd = request.getRequestDispatcher("/jsp/admin.jsp");
-			rd.forward(request, response);	
-		
-		
-		}else if(str.equals("/Admin2/admin.do")) {
-			
-			RequestDispatcher rd = request.getRequestDispatcher("/jsp/admin.jsp");
-			rd.forward(request, response);	
-		
-		
-		}else if(str.equals("/Admin2/admin.do")) {
-			
-			RequestDispatcher rd = request.getRequestDispatcher("/jsp/admin.jsp");
-			rd.forward(request, response);	
-		
 		}
 			
 			

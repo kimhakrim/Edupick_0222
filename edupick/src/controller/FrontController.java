@@ -55,12 +55,17 @@ public class FrontController extends HttpServlet {
 			ic.doGet(request, response);
 	
 		}else if(hc.equals("Admin")) {
-			InstituteController ic = new InstituteController();
-			ic.doGet(request, response);
+			AdminController ac = new AdminController();
+			ac.doGet(request, response);
 		}else if(hc.equals("Admin2")) {
-			InstituteController ic = new InstituteController();
-			ic.doGet(request, response);
+			Admin2Controller a2c = new Admin2Controller();
+			a2c.doGet(request, response);
+		}else if(hc.equals("Myservice")) {
+			MyserviceController mc = new MyserviceController();
+			mc.doGet(request, response);
+			
 		}
+		
 	}
 
 	

@@ -1,133 +1,133 @@
 ﻿$(document).ready(function(){
 	$(".admin").click(function(){
-		$(location).attr('href','adminmanage.do');
+		$(location).attr('href','adminManage.do');
 	});
 	
 	$(".logodiv").click(function(){
-		$(location).attr('href','adminmain.do');
+		$(location).attr('href','admin.do');
 	});
 	$("#subnav1").click(function(){
-		$(location).attr('href','adminmembermanage.do');
+		$(location).attr('href','adminMemberManage.do');
 	});
 	$("#subnav2").click(function(){
-		$(location).attr('href','adminproductmanage.do');
+		$(location).attr('href','adminProductManage.do');
 	});
 	$("#subnav3").click(function(){
-		$(location).attr('href','adminordermanage.do');
+		$(location).attr('href','adminOrderManage.do');
 	});
 	$("#subnav4").click(function(){
-		$(location).attr('href','adminboardmanage.do');
+		$(location).attr('href','adminBoardManage.do');
 	});
 	$("#subnav5").click(function(){
-		$(location).attr('href','adminpagemanage.do');
+		$(location).attr('href','adminPageManage.do');
 	});
 	$("#subnav6").click(function(){
-		$(location).attr('href','adminother.do');
+		$(location).attr('href','adminOther.do');
 	});
 	$("#btbt").click(function(){
-		$(location).attr('href','adminmemberdetail.do');
+		$(location).attr('href','adminMemberDetail.do');
 	});
 	$("#btbtn").click(function(){
-		$(location).attr('href','adminanswer.do');
+		$(location).attr('href','adminAnswer.do');
 	});
 	$("#btbtcl").click(function(){
-		$(location).attr('href','admininstitutedetail.do');
+		$(location).attr('href','adminInstituteDetail.do');
 	});
 	$("#sec").click(function(){
-		$(location).attr('href','adminmembermanage.do');
+		$(location).attr('href','adminMemberManage.do');
 	});
 	$("#fro").click(function(){
-		$(location).attr('href','adminmembermanage.do');
+		$(location).attr('href','adminMemberManage.do');
 	});
 	$("#fro1").click(function(){
-		$(location).attr('href','adminmembermanage.do');
+		$(location).attr('href','adminMemberManage.do');
 	});	
 	$("#cllist").click(function(){
-		$(location).attr('href','adminproductmanage.do');
+		$(location).attr('href','adminProductManage.do');
 	});
 	$("#clplus_1").click(function(){
-		$(location).attr('href','admininstituteadd.do');
+		$(location).attr('href','adminInstituteAdd.do');
 	});
 	$("#clplus_2").click(function(){
-		$(location).attr('href','adminboardadd.do');
+		$(location).attr('href','adminBoardAdd.do');
 	});
 	$(".subbtn>button").click(function(){
-		$(location).attr('href','admininstitutedetail.do');
+		$(location).attr('href','adminInstituteDetail.do');
 	});
 	$("#clmodi").click(function(){
-		$(location).attr('href','admininstitutemodify.do');
+		$(location).attr('href','adminInstituteModify.do');
 	});
 	$("#btbt99").click(function(){
-		$(location).attr('href','admincouresdetail.do');
+		$(location).attr('href','adminCouresDetail.do');
 	});
 	$("#modibtt").click(function(){
-		$(location).attr('href','admincouresmodify.do');
+		$(location).attr('href','adminCouresModify.do');
 	});
 	$("#listbt").click(function(){
-		$(location).attr('href','adminproductmanage.do');
+		$(location).attr('href','adminProductManage.do');
 	});
 	$("#savebt").click(function(){
-		$(location).attr('href','admincouresdetail.do');
+		$(location).attr('href','adminCouresDetail.do');
 	});
 	$("#btbt88").click(function(){
-		$(location).attr('href','adminstudentdetail.do');
+		$(location).attr('href','adminStudentDetail.do');
 	});
 	$("#listbtn1").click(function(){
-		$(location).attr('href','adminproductmanage.do');
+		$(location).attr('href','adminProductManage.do');
 	});
 	$("#modibtn1").click(function(){
-		$(location).attr('href','adminstudentmodify.do');
+		$(location).attr('href','adminStudentModify.do');
 	});
 	$("#modibtn2").click(function(){
-		$(location).attr('href','adminstudentdetail.do');
+		$(location).attr('href','adminStudentDetail.do');
 	});
 	$("#btbt77").click(function(){
-		$(location).attr('href','adminreviewdetail.do');
+		$(location).attr('href','adminReviewDetail.do');
 	});
 	$("#starbtn").click(function(){
-		$(location).attr('href','adminproductmanage.do');
+		$(location).attr('href','adminProductManage.do');
 	});
 	$("#btbt66").click(function(){
-		$(location).attr('href','admincommunitydetail.do');
+		$(location).attr('href','adminCommunityDetail.do');
 	});
 	$("#listbtn3").click(function(){
-		$(location).attr('href','adminproductdetail.do');
+		$(location).attr('href','adminProductDetail.do');
 	});
 	$("#btbt55").click(function(){
-		$(location).attr('href','adminadvicedetail.do');
+		$(location).attr('href','adminAdviceDetail.do');
 	});
 	$("#cmlist").click(function(){
-		$(location).attr('href','adminproductmanage.do');
+		$(location).attr('href','adminProductManage.do');
 	});
 	$("#btbt44").click(function(){
-		$(location).attr('href','adminpaydetail.do');
+		$(location).attr('href','adminPayDetail.do');
 	});
 	$("#cdlist").click(function(){
-		$(location).attr('href','adminordermanage.do');
+		$(location).attr('href','adminOrderManage.do');
 	});
 	$("#btbt33").click(function(){
-		$(location).attr('href','adminvisitdetail.do');
+		$(location).attr('href','adminVisitDetail.do');
 	});
 	$("#visitlist").click(function(){
-		$(location).attr('href','adminordermanage.do');
+		$(location).attr('href','adminOrderManage.do');
 	});
 	$("#postbtn").click(function(){
-		$(location).attr('href','adminboardmanage.do');
+		$(location).attr('href','adminBoardManage.do');
 	});
 	$("#postlist").click(function(){
-		$(location).attr('href','adminboardmanage.do');
+		$(location).attr('href','adminBoardManage.do');
 	});
 	$("#btbtmf").click(function(){
-		$(location).attr('href','adminboardmodify.do');
+		$(location).attr('href','adminBoardModify.do');
 	});
 	$("#btbt22").click(function(){
-		$(location).attr('href','adminboarddetail.do');
+		$(location).attr('href','adminBoardDetail.do');
 	});
 	$("#btbt11").click(function(){
-		$(location).attr('href','adminreviewdetail.do');
+		$(location).attr('href','adminReviewDetail.do');
 	});
 	$("#commentlist").click(function(){
-		$(location).attr('href','adminboardmanage.do');
+		$(location).attr('href','adminBoardManage.do');
 	});
 	// -------------------------------------
 	$("#modibt0").click(function(){

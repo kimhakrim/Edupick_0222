@@ -20,50 +20,50 @@ public class LicenseeDao {
 }
 	//회원가입 db에 입력
 	public int licenseeInsert(String lId, String lName, String lPwd, String lJumin, String lPostCode, String lRoadAddr, String lJibunAddr, String lDetailAddr, String lExtraAddr, String lEmail, String lTel, String lComName, String lNumber) {
-		int exec = 0;
-		
-		System.out.println("lId->"+lId);
-		System.out.println("lName->"+lName);
-		System.out.println("lPwd->"+lPwd);
-		System.out.println("lJumin->"+lJumin);
-		System.out.println("lPostCode->"+lPostCode);
-		System.out.println("lRoadAddr->"+lRoadAddr);
-		System.out.println("lJibunAddr->"+lJibunAddr);
-		System.out.println("lDetailAddr->"+lDetailAddr);
-		System.out.println("lExtraAddr->"+lExtraAddr);
-		System.out.println("lEmail->"+lEmail);
-		System.out.println("lTel->"+lTel);
-		System.out.println("lComName->"+lComName);
-		System.out.println("lNumber->"+lNumber);
-		
-		
-		
-		 try {
-			String sql= "insert into licensee(lidx, lid, lname, lpwd, ljumin, lpostcode, lroadaddr, ljibunaddr, ldetailaddr, lextraaddr, lemail, ltel, lcomname, lnumber, lgrade) values(sq_licensee.nextval,?,?,?,?,?,?,?,?,?,?,?,?,?,'L')";
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, lId);
-			pstmt.setString(2, lName);
-			pstmt.setString(3, lPwd);
-			pstmt.setString(4, lJumin);
-			pstmt.setString(5, lPostCode);
-			pstmt.setString(6, lRoadAddr);
-			pstmt.setString(7, lJibunAddr);
-			pstmt.setString(8, lDetailAddr);
-			pstmt.setString(9, lExtraAddr);
-			pstmt.setString(10, lEmail);
-			pstmt.setString(11, lTel);
-			pstmt.setString(12, lComName);
-			pstmt.setString(13, lNumber);
-			
-			pstmt.executeUpdate();
-		
-			
-		 } catch (SQLException e) { e.printStackTrace(); }
-		 
-		System.out.println("licensee->"+exec);
-		return exec;
-		
-	}
+	      int exec = 0;
+	      
+	      System.out.println("lId->"+lId);
+	      System.out.println("lName->"+lName);
+	      System.out.println("lPwd->"+lPwd);
+	      System.out.println("lJumin->"+lJumin);
+	      System.out.println("lPostCode->"+lPostCode);
+	      System.out.println("lRoadAddr->"+lRoadAddr);
+	      System.out.println("lJibunAddr->"+lJibunAddr);
+	      System.out.println("lDetailAddr->"+lDetailAddr);
+	      System.out.println("lExtraAddr->"+lExtraAddr);
+	      System.out.println("lEmail->"+lEmail);
+	      System.out.println("lTel->"+lTel);
+	      System.out.println("lComName->"+lComName);
+	      System.out.println("lNumber->"+lNumber);
+	      
+	      
+	      
+	       try {
+	         String sql= "insert into licensee(lidx, lid, lname, lpwd, ljumin, lpostcode, lroadaddr, ljibunaddr, ldetailaddr, lextraaddr, lemail, ltel, lcomname, lnumber, lgrade) values(sq_licensee.nextval,?,?,?,?,?,?,?,?,?,?,?,?,?,'L')";
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setString(1, lId);
+	         pstmt.setString(2, lName);
+	         pstmt.setString(3, lPwd);
+	         pstmt.setString(4, lJumin);
+	         pstmt.setString(5, lPostCode);
+	         pstmt.setString(6, lRoadAddr);
+	         pstmt.setString(7, lJibunAddr);
+	         pstmt.setString(8, lDetailAddr);
+	         pstmt.setString(9, lExtraAddr);
+	         pstmt.setString(10, lEmail);
+	         pstmt.setString(11, lTel);
+	         pstmt.setString(12, lComName);
+	         pstmt.setString(13, lNumber);
+	         
+	         pstmt.executeUpdate();
+	      
+	         
+	       } catch (SQLException e) { e.printStackTrace(); }
+	       
+	      System.out.println("licensee->"+exec);
+	      return exec;
+	      
+	   }
 	public int loginCheck(String lId, String lPwd) {
 		
 		int value2 = 0;
@@ -141,70 +141,70 @@ public String getName(String lName, String lPwd) {
 	}
 	
 	public LicenseeVo getInForm(String lId) {
-		LicenseeVo lv = null;
-		
-		try {
-			String sql = "select * from licensee where lid =?";
-			//String sql2 = "select"
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, lId);
-			ResultSet rs = pstmt.executeQuery();		
-			if(rs.next()) {
-				lv = new LicenseeVo();
-				lv.setLidx(rs.getInt("lidx"));
-				lv.setLid(rs.getString("lid"));
-				lv.setLpwd(rs.getString("lpwd"));
-				lv.setLname(rs.getString("lname"));
-				lv.setLjumin(rs.getString("ljumin"));
-				lv.setLtel(rs.getString("ltel"));
-				lv.setLemail(rs.getString("lemail"));
-				lv.setLpostcode(rs.getString("lpostcode"));
-				lv.setLroadaddr(rs.getString("lroadaddr"));
-				lv.setLjibunaddr(rs.getString("ljibunaddr"));
-				lv.setLdetailaddr(rs.getString("ldetailaddr"));
-				lv.setLextraaddr(rs.getString("lextraaddr"));
-				lv.setLcomname(rs.getString("lcomname"));
-				lv.setLnumber(rs.getString("lnumber"));
-			}
-			
-			}catch (Exception e){
-				e.printStackTrace();
-			}
-			return lv ;
-			
-	
-			}
-	public int licenseeModify(int lidx, String lPwd, String lPostCode, String lRoadAddr, String lJibunAddr, String lDetailAddr, String lExtraAddr, String lEmail, String lTel, String lComName, String lNumber ) {
-		
-		int value2 = 0;
-		
-		try {
-			String sql = "update licensee set lpwd=? , lpostcode =?, lroadaddr =?, ljibunaddr=? , ldetailaddr=? , lextraaddr =?, lemail=? ,ltel = ?, lcomname=?, lnumber=?"
-					+"where lidx=?";
-			
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, lPwd);
-			pstmt.setString(2, lPostCode);
-			pstmt.setString(3, lRoadAddr);
-			pstmt.setString(4, lJibunAddr);
-			pstmt.setString(5, lDetailAddr);
-			pstmt.setString(6, lExtraAddr);
-			pstmt.setString(7, lEmail);
-			pstmt.setString(8, lTel);
-			pstmt.setString(9, lComName);
-			pstmt.setString(10, lNumber);
-			pstmt.setInt(11, lidx);
-			value2 = pstmt.executeUpdate();
-		
-		}catch(Exception e) {
-			e.printStackTrace();
-		}finally {
-			try {pstmt.close(); }catch(SQLException s) {}
-			try {conn.close();}catch(SQLException s) {}
-		}	
-		return value2;
-		
-		
-	} 
-	
+	      LicenseeVo lv = null;
+	      
+	      try {
+	         String sql = "select * from licensee where lid =?";
+	         //String sql2 = "select"
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setString(1, lId);
+	         ResultSet rs = pstmt.executeQuery();      
+	         if(rs.next()) {
+	            lv = new LicenseeVo();
+	            lv.setLidx(rs.getInt("lidx"));
+	            lv.setLid(rs.getString("lid"));
+	            lv.setLpwd(rs.getString("lpwd"));
+	            lv.setLname(rs.getString("lname"));
+	            lv.setLjumin(rs.getString("ljumin"));
+	            lv.setLtel(rs.getString("ltel"));
+	            lv.setLemail(rs.getString("lemail"));
+	            lv.setLpostcode(rs.getString("lpostcode"));
+	            lv.setLroadaddr(rs.getString("lroadaddr"));
+	            lv.setLjibunaddr(rs.getString("ljibunaddr"));
+	            lv.setLdetailaddr(rs.getString("ldetailaddr"));
+	            lv.setLextraaddr(rs.getString("lextraaddr"));
+	            lv.setLcomname(rs.getString("lcomname"));
+	            lv.setLnumber(rs.getString("lnumber"));
+	         }
+	         
+	         }catch (Exception e){
+	            e.printStackTrace();
+	         }
+	         return lv ;
+	         
+	   
+	         }
+	   public int licenseeModify(int lidx, String lPwd, String lPostCode, String lRoadAddr, String lJibunAddr, String lDetailAddr, String lExtraAddr, String lEmail, String lTel, String lComName, String lNumber ) {
+	      
+	      int value2 = 0;
+	      
+	      try {
+	         String sql = "update licensee set lpwd=? , lpostcode =?, lroadaddr =?, ljibunaddr=? , ldetailaddr=? , lextraaddr =?, lemail=? ,ltel = ?, lcomname=?, lnumber=?"
+	               +"where lidx=?";
+	         
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setString(1, lPwd);
+	         pstmt.setString(2, lPostCode);
+	         pstmt.setString(3, lRoadAddr);
+	         pstmt.setString(4, lJibunAddr);
+	         pstmt.setString(5, lDetailAddr);
+	         pstmt.setString(6, lExtraAddr);
+	         pstmt.setString(7, lEmail);
+	         pstmt.setString(8, lTel);
+	         pstmt.setString(9, lComName);
+	         pstmt.setString(10, lNumber);
+	         pstmt.setInt(11, lidx);
+	         value2 = pstmt.executeUpdate();
+	      
+	      }catch(Exception e) {
+	         e.printStackTrace();
+	      }finally {
+	         try {pstmt.close(); }catch(SQLException s) {}
+	         try {conn.close();}catch(SQLException s) {}
+	      }   
+	      return value2;
+	      
+	      
+	   } 
+
 }

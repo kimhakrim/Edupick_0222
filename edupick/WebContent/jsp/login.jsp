@@ -14,6 +14,7 @@
 		<script src="<%= request.getContextPath() %>/js/jquery-3.5.1.min.js"></script>
 		<script src="<%= request.getContextPath() %>/js/login.js"></script>
 		<script src="<%= request.getContextPath() %>/js/loginaction.js"></script>
+		<link href="<%= request.getContextPath() %>/css/rp.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 	<h1>로그인</h1>
@@ -33,7 +34,7 @@
 						<p>
 						<div class="d3">비밀번호 : &nbsp;&nbsp;<input type="password" name="loginmpwd" style="width:120px;"></div>
 						<p><a href="#" class="a1">아이디 찾기&nbsp;&nbsp;</a>&nbsp;<a href="#" class="a2">&nbsp;비밀번호 찾기</a></p>
-						<img src="<%= request.getContextPath() %>/webimage/logo.jpg">
+						<a href="<%=request.getContextPath() %>/Common/main.do"><img src="<%= request.getContextPath() %>/webimage/logo.jpg"></a>
 					
 				</div>
 			</section>
@@ -44,7 +45,7 @@
 						<p>
 						<div class="d3">비밀번호 : &nbsp;&nbsp;<input type="password" name="loginlpwd" style="width:120px;"></div>
 						<p><a href="#" class="a1">아이디 찾기&nbsp;&nbsp;</a>&nbsp;<a href="#" class="a2">&nbsp;비밀번호 찾기</a></p>
-						<img src="<%= request.getContextPath() %>/webimage/logo.jpg">
+						<a href="<%=request.getContextPath() %>/Common/main.do"><img src="<%= request.getContextPath() %>/webimage/logo.jpg"></a>
 					
 				</div>
 			</section>

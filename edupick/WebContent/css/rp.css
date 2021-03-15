@@ -1,8 +1,4 @@
-@media (max-width:1960px){
-	#topmenu {
-		zoom:0.8;
-	}
-}
+
 @media (max-width:1700px){
 	.quizdiv{
 		position:relative;
@@ -12,11 +8,12 @@
 		margin-left:-10%;
 		zoom:0.9;
 	}
+	#topmenumain > ul > li > a {
+		zoom:0.85;
+	}
 }
 @media (max-width: 1600px){
-	#topmenu > li > a {
-		font-size:20px;	
-	}
+
 	#img3{
 		margin-left:5%;
 	}
@@ -26,7 +23,12 @@
 	}
 	.imgbanner{
 		zoom:0.9;
-		margin-left:10%;
+	}
+	.imgbanner2{
+		zoom:0.9;
+	}
+	.imgbanner3{
+		zoom:0.9;
 	}
 	.login{
 		zoom:0.9;
@@ -67,14 +69,31 @@
 	.classD {
 		margin-left:-10%;
 	}
-	#topmenu {
-		padding-left:230px;
+
+	.lisiz .lisiz_1 {
+		zoom:0.9;
+		margin-left:-100px;
+	}
+	#nav1_1 {
+		display:none;
+	}
+	.creditnum {
+		position:relative;
+		left:80%;
+	}	
+	#topmenumain > ul > li > a {
+		zoom:0.65;
+	}
+	#topmenumain > ul > li {
+		margin-left: 150px;
+	}
+	#topmenumain {
+		margin-top:-50px;
+		height:80px;
 	}
 }
 @media (max-width: 1350px){
-	#topmenu > li > a {
-		font-size:15px;
-	}
+	
 	.div01{
 		margin-left:38%;
 		margin-right:10%;
@@ -105,9 +124,17 @@
 		zoom:0.6;
 		margin-left:10%;
 	}
+	.imgbanner2{
+		zoom:0.6;
+		margin-left:10%;
+	}
+	.imgbanner3{
+		zoom:0.6;
+		margin-left:10%;
+	}
 	.login{
 		zoom:0.6;
-		margin-left:80%;
+		margin-left:60%;
 	}
 	.subbanner_main{
 		margin-left:10%;
@@ -151,17 +178,45 @@
 		margin-left:-10%;
 		zoom:0.8;
 	}
-	#topmenu {
-		padding-left:180px;
-	}
+	
 	.hr01 {
 		margin-top:50px;
 	}
+	#rpsize {
+		zoom:0.9;
+		margin-left:-10%;
+	}
+	.headerdiv2 {
+		position:relative;
+		left:-400px;
+	}
+	.agree {
+		position:relative;
+		left:210px;
+	}
+	.creditarticle {
+		zoom:0.8;
+	}
+	 .headerdiv2 {
+		zoom:0.8;
+	 }
+	 .creditnum {
+		position:relative;
+		top:-250px;
+	 }
+	#topmenumain > ul > li > a {
+		zoom:0.6;
+	}
+	#topmenumain > ul > li {
+		margin-left: 120px;
+	}
+	#topmenumain {
+		margin-top:-90px;
+		height:70px;
+	}
 }
 @media (max-width: 1150px){
-	#topmenu > li > a {
-		font-size:10px;
-	}
+	
 	.ct01{
 		font-size:12px;
 	}
@@ -194,6 +249,34 @@
 	.servicemain {
 		margin-left:-20%;
 		zoom:0.8;
+	}
+	.creditarticle {
+		zoom:0.65;
+	}
+	.headerdiv2 {
+		zoom:0.65;
+	}
+	#nav1_2 {
+		zoom:0.9;
+		height:1150px;
+	}
+	.creditnum {
+		position:relative;
+		top:-150px;
+	 }
+	#topmenumain > ul > li > a {
+		zoom:0.45;
+	}
+	#topmenumain > ul > li {
+		margin-left: 110px;
+	}
+	#topmenumain {
+		margin-top:-90px;
+		height:70px;
+	}
+	#examno {
+		position:absolute;
+		left:200px;
 	}
 }
 
@@ -327,11 +410,60 @@
 	.main {
 		zoom:0.9;
 	}
-	#topmenu {
-		padding-left:100px;
+	
+	#rpsize {
+		zoom:0.7;
+		margin-left:-12%;
 	}
-	#topmenu > li {
-		margin-left:5%;
+	.lisiz .lisiz_1 {
+		zoom:0.85;
+		margin-left:-150px;
+	}
+	.logdiv {
+		margin-left:-100px;
+	}
+	#nav1_2 {
+		zoom:0.7;
+		height:1470px;
+	}
+	.agree > #check {
+		margin-left:0;
+	}
+	.agree {
+		position:relative;
+		left:500px;
+	}
+	.headerdiv2 {
+		zoom:0.5;
+	}
+	.creditarticle {
+		zoom:0.5;
+	}
+	.creditnum {
+		zoom:1.5;
+	}
+	#infolog {
+		position:relative;
+		left:-20%;
+	}
+	#carfrm {
+		position:absolute;
+		left:25%;
+	}
+	#topmenumain > ul > li > a {
+		zoom:0.45;
+	}
+	#topmenumain > ul > li {
+		margin-left: 60px;
+	}
+	#topmenumain {
+		margin-top:-90px;
+		height:70px;
+	}
+	#examno {
+		position:absolute;
+		left:100px;
+		zoom:0.9;
 	}
 }
 @media (max-width: 800px){
@@ -367,7 +499,17 @@
 	.main {
 		zoom:0.8;
 	}
-	#topmenu {
+	
+	.lisiz .lisiz_1 {
+		zoom:0.8;
+		margin-left:-200px;
+	}
+	.headerdiv2 {
+		zoom:0.4;
+	}
+	#examno {
+		position:absolute;
+		left:50px;
 		zoom:0.8;
 	}
 }
@@ -379,9 +521,17 @@
 		zoom:0.5;
 		margin-left:10%;
 	}
+	.imgbanner2{
+		zoom:0.5;
+		margin-left:10%;
+	}
+	.imgbanner3{
+		zoom:0.5;
+		margin-left:10%;
+	}
 	.login{
 		zoom:0.5;
-		margin-left:80%;
+		margin-left:70%;
 	}
 	.subbanner_main{
 		zoom:0.6;
@@ -457,8 +607,42 @@
 	.main {
 		zoom:0.7;
 	}
-	#topmenu {
-		zoom:0.7;
+	
+	#rpsize {
+		zoom:0.6;
+		margin-left:-12%;
+	}
+	.lisiz .lisiz_1 {
+		zoom:0.6;
+		margin-top:100px;
+		margin-left:-200px;
+	}
+	.headerdiv2 {
+		zoom:0.37;
+	}
+	.maindiv2 {
+		position:relative;
+		left:-300px;
+		zoom:0.9;
+	}
+	.creditnum {
+		position:relative;
+		left:72%;
+	}
+	#topmenumain > ul > li > a {
+		zoom:0.4;
+	}
+	#topmenumain > ul > li {
+		margin-left: 40px;
+	}
+	#topmenumain {
+		margin-top:-120px;
+		height:70px;
+	}
+	#examno {
+		position:absolute;
+		left:50px;
+		zoom:0.77;
 	}
 }
 @media (max-width: 650px){
@@ -491,6 +675,14 @@
 		zoom:0.3;	
 	}
 	.imgbanner{
+		zoom:0.3;
+		margin-left:10%;
+	}
+	.imgbanner2{
+		zoom:0.3;
+		margin-left:10%;
+	}
+	.imgbanner3{
 		zoom:0.3;
 		margin-left:10%;
 	}
@@ -543,6 +735,9 @@
 	.loginafter{
 		zoom:0.3;
 	}	
+	.lofer2 > img {
+		zoom:0.5;
+	}
 	.quizdiv{
 		zoom:0.35;
 		position:relative;
@@ -574,15 +769,1051 @@
 	.main {
 		zoom:0.55;
 	}
-	#topmenu {
-		zoom:0.55;
-	}
+	
 	.hr01 {
 		margin-top:35px;
+	}
+	#rpsize {
+		zoom:0.5;
+		margin-left:-14%;
+	}
+	.headerdiv2 {
+		zoom:0.30;
+	}
+	#nav1_2 {
+		width:300px;
+		zoom:0.6;
+		height:1720px;
+	}
+	.payment {
+		position:relative;
+		left:-50px;
+	}
+	.creditnum {
+		position:relative;
+		top:-240px;
+		left:74%;
+	}
+	#infolog {
+		position:relative;
+		left:-40%;
+		width:200px;
+	}
+	#carfrm {
+		position:absolute;
+		left:10%;
+	}
+	.logdiv2 {
+		margin-left:-40px;
+	}
+	#topmenumain > ul > li > a {
+		zoom:0.3;
+	}
+	#topmenumain > ul > li {
+		margin-left: 30px;
+	}
+	#topmenumain {
+		margin-top:-150px;
+		height:50px;
+	}
+	#examno {
+		position:absolute;
+		left:30px;
+		zoom:0.6;
+		margin-top:100px;
+	}
+}
+
+@media (max-width: 550px){
+	.creditnum {
+		position:absolute;
+		top:520px;
+		left:69%;
+		height:100px;
+	}
+}
+
+@media (max-width: 300px){
+	body:before {
+		content : '브라우저 크기가 너무 작습니다. 내용을 불러올수 없습니다.';
+		font-size:50px;
+		color:red;
+		background:#D8D8D8;
+	}
+	header,section,div,form,hr,p,span,h1,h2,h3,h4,h5,h6,button,footer,table,li,ul {
+		display:none;
 	}
 }
 
 
-@media (max-width:1960px){
-	
+/* ---------------------------------------------------------------관리자 */
+
+@media (max-width: 1900px) {
+	.adminmenu {
+		display:none;
 	}
+	.adminmenu2 {
+		display:block;
+	}
+	.adminmenu3 {
+		display:block;
+	}
+	.adminmenu4 {
+		display:block;
+	}
+	.imdif {
+		zoom:0.9;
+	}
+	.imdif2 {
+		zoom:0.9;
+	}
+	.selectsh3 {
+		position:relative;
+		left:100px;
+	}
+	.mainfrm4 > ul {
+		width:1400px;
+	}
+	.usermainpage4 , .mainfrm4 , .mainfrm > ul , .mainfrm > ul > li , .ftaplus {
+		zoom:0.9;
+	}
+	.ftaplus {
+		position:relative;
+		left:1390px;
+		top:100px;
+	}
+	#ftaplusbtn > img {
+		position:relative;
+		top:100px;
+	}
+	.questfrm {
+		zoom:0.85;
+	}
+	.faqcontentmain {
+		position:absolute;
+	}
+	.sena01 {
+		zoom:0.9;
+	}
+	#senana {
+		margin-top:100px;
+	}
+	.clmain {
+		zoom:0.9;
+	}
+	.addfrm {
+		zoom:0.9;
+	}
+	.cladmain {
+		position:relative;
+		left:200px;
+	}
+	#senagogo2 {
+		width:246px;
+	}
+	.clanfrm {
+		position:relative;
+		left:500px;
+	}
+	
+	.starfrm {
+		zoom:0.85;
+	}
+	.cmnfrm {
+		zoom:0.9;
+	}
+	.senat {
+		zoom:0.9;
+	}
+}
+
+@media (max-width: 1600px) {
+	.imdif {
+		zoom:0.8;
+	}
+	.nav , .navadmin ,.subnav2 , .adminmenu2 , .adminmenu3 {
+		width:200px;
+		font-size:20px;
+	}
+	.imdif2 {
+		zoom:0.75;
+	}
+	.usermainpage4 , .mainfrm4 , .mainfrm > ul , .mainfrm > ul > li , #ftaplusbtn {
+		zoom:0.7;
+	}
+	.mainfrm4 > ul > li:nth-child(5) {
+	width:185px;
+	}
+	.ftaplus {
+		position:relative;
+		top:50px;
+		left:1080px;
+	}
+	.frmut {
+		margin-left:-300px;
+	}
+	.questfrm {
+		zoom:0.7;
+	}
+	.sena01 {
+		zoom:0.7;
+	}
+	#senana {
+		position:relative;
+		top:200px;
+		left:500px;
+		zoom:0.98;
+	}
+	.adminmenu4 , .subnav3 {
+		width:192px;
+	}
+	.clmain {
+		zoom:0.76;
+	}
+	.addfrm {
+		zoom:0.8;
+		position:relative;
+		left:180px;
+	}
+	#senagogo {
+		width:201px;
+	}
+	#senagogo > div {
+		width:200px;
+	}
+	
+	#senagogo2 {
+		width:201px;
+	}
+	.subnav4 {
+		width:200px;
+	}
+	.starfrm {
+		zoom:0.7;
+	}
+	.cmnfrm {
+		zoom:0.8;
+	}
+	.angfrm {
+		zoom:0.9;
+		position:relative;
+		left:400px;
+	}
+	.senat {
+		zoom:0.75;
+	}
+	.crpfrm {
+		zoom:0.83;
+	}
+	.visitfrm {
+		position:relative;
+		left:700px;
+	}
+	.jusicfrm {
+		position:relative;
+		left:500px;
+	}
+	.coadfrm {
+		position:relative;
+		left:600px;
+	}	
+}
+
+@media (max-width: 1350px) {
+	.imdif {
+		zoom:0.7;
+	}
+	.imdif2 {
+		zoom:0.65;
+	}
+	.usermainpage4 , .mainfrm4 , .mainfrm > ul , .mainfrm > ul > li , #ftaplusbtn {
+		zoom:0.6;
+	}
+	.mainfrm4 > ul > li:nth-child(5) {
+	width:183px;
+	}
+	.ftaplus {
+		position:relative;
+		top:0px;
+		left:920px;
+	}
+	.questfrm {
+		zoom:0.63;
+	}
+	.sena01 {
+		zoom:0.65;
+	}
+	#senana {
+		position:relative;
+		top:200px;
+		left:500px;
+		zoom:0.9;
+	}
+	.clmain {
+		zoom:0.67;
+		position:absolute;
+		top:500px;
+	}
+	.addfrm {
+		zoom:0.76;
+		position:relative;
+		left:180px;
+	}
+	.cladmain {
+		position:relative;
+		left:50px;
+	}
+	.clanfrm {
+		position:relative;
+		left:300px;
+	}
+	.starfrm {
+		zoom:0.63;
+		position:absolute;
+		top:500px;
+	}
+	.cmnfrm {
+		zoom:0.7;
+	}
+	.angfrm {
+		zoom:0.8;
+		position:relative;
+		left:380px;
+	}
+	.senat {
+		zoom:0.65;
+	}
+	.crpfrm {
+		zoom:0.8;
+		position:relative;
+		left:300px;
+	}
+	.visitfrm {
+		position:relative;
+		left:650px;
+	}
+	.jusicfrm {
+		position:relative;
+		left:400px;
+	}
+	.coadfrm {
+		position:relative;
+		left:500px;
+	}	
+}
+
+@media (max-width: 1200px) {
+	.imdif {
+		zoom:0.5;
+		position:relative;
+		top:100px;
+		left:50px;
+	}
+	.imdif2 {
+		zoom:0.56;
+		position:relative;
+		left:10px;
+	}
+	.usermainpage4 , .mainfrm4 , .mainfrm > ul , .mainfrm > ul > li , #ftaplusbtn {
+		zoom:0.5;
+		margin-left:100px;
+	}
+	.mainfrm4 > ul > li:nth-child(5) {
+	width:180px;
+	}
+	.ftaplus {
+		position:relative;
+		top:-20px;
+		left:770px;
+	}
+	.frmut {
+		zoom:0.8;
+		margin-left:-300px;
+	}
+	.questfrm {
+		zoom:0.5;
+		margin-left:80px;
+		margin-top:200px;
+	}
+	.sena01 {
+		zoom:0.545;
+		position:relative;
+		left:30px;
+	}
+	#senana {
+		position:relative;
+		top:500px;
+		left:500px;
+		zoom:0.87;
+	}
+	.clmain {
+		zoom:0.54;
+		position:absolute;
+		top:700px;
+		left:400px;
+	}
+	.addfrm {
+		zoom:0.6;
+		position:relative;
+		left:230px;
+	}
+	.cladmain {
+		position:relative;
+		left:-80px;
+	}
+	.clanfrm {
+		position:relative;
+		left:200px;
+	}
+	.starfrm {
+		zoom:0.51;
+		position:absolute;
+		top:600px;
+		left:410px;
+	}
+	.cmnfrm {
+		zoom:0.65;
+		position:absolute;
+		left:300px;
+		top:400px;
+	}
+	.angfrm {
+		zoom:0.7;
+		position:relative;
+		left:320px;
+	}
+	.senat {
+		zoom:0.55;
+		position:relative;
+		top:50px;
+		left:20px;
+	}
+	.crpfrm {
+		zoom:0.7;
+		position:relative;
+		left:300px;
+	}
+	.visitfrm {
+		position:relative;
+		left:580px;
+	}
+	.jusicfrm {
+		position:relative;
+		left:300px;
+	}
+	.coadfrm {
+		position:relative;
+		left:400px;
+	}	
+}
+
+@media (max-width: 1000px) {
+	#logdiv , #logdiv_2 {
+		zoom:0.8;
+	}
+	#logodiv2 , #logodiv_2 {
+		zoom:0.8;
+	}
+	.imdif2 {
+		zoom:0.45;
+		position:relative;
+		left:100px;
+	}
+	.usermainpage4 , .mainfrm4 , .mainfrm > ul , .mainfrm > ul > li , #ftaplusbtn {
+		zoom:0.4;
+		margin-left:200px;
+	}
+	.mainfrm4 > ul > li:nth-child(5) {
+	width:175px;
+	}
+	.ftaplus {
+		position:relative;
+		left:610px;
+		top:-50px;
+	}
+	.questfrm {
+		zoom:0.44;
+		margin-left:120px;
+		margin-top:300px;
+	}
+	.sena01 {
+		zoom:0.48;
+		position:relative;
+		left:55px;
+	}
+	#senana {
+		position:relative;
+		top:600px;
+		left:200px;
+		zoom:0.95;
+	}
+	#senana_2 {
+		margin-left:200px;
+		zoom:2;
+	}
+	.clmain {
+		zoom:0.48;
+		position:absolute;
+		top:700px;
+		left:420px;
+	}
+	.addfrm {
+		zoom:0.5;
+		position:relative;
+		left:320px;
+	}
+	.cladmain {
+		position:relative;
+		left:-80px;
+		zoom:0.9;
+	}
+	.clanfrm {
+		position:relative;
+		left:200px;
+		zoom:0.9;
+	}
+	.starfrm {
+		zoom:0.45;
+		position:absolute;
+		top:900px;
+		left:450px;
+	}
+	.cmnfrm {
+		zoom:0.58;
+		position:absolute;
+		left:330px;
+		top:400px;
+	}
+	.angfrm {
+		zoom:0.6;
+		position:relative;
+		left:320px;
+	}
+	.senat {
+		zoom:0.48;
+		position:relative;
+		top:50px;
+		left:70px;
+	}
+	.crpfrm {
+		zoom:0.63;
+		position:relative;
+		left:300px;
+	}
+	.visitfrm {
+		position:relative;
+		left:500px;
+	}
+	.jusicfrm {
+		position:relative;
+		left:300px;
+		zoom:0.9;
+	}
+	.coadfrm {
+		position:relative;
+		left:300px;
+	}	
+}
+
+@media (max-width: 900px) {
+	.imdif {
+		zoom:0.4;
+		position:relative;
+		top:300px;
+		left:250px;
+	}
+	.nav , .navadmin ,.subnav2 , .adminmenu2 , .adminmenu3 , .admin {
+		width:150px;
+		font-size:15px;
+	}
+	.navuser_1 {
+		width:100px;
+		position:relative;
+		right:70px;
+	}
+	.imdif2 {
+		zoom:0.4;
+		position:relative;
+		left:100px;
+	}
+	.frmut {
+		zoom:0.7;
+		margin-left:-400px;
+	}
+	.questfrm {
+		zoom:0.39;
+		margin-left:120px;
+		margin-top:300px;
+	}
+	.sena01 {
+		zoom:0.42;
+		position:relative;
+		left:55px;
+	}
+	#senana {
+		position:relative;
+		top:600px;
+		left:200px;
+		zoom:0.95;
+	}
+	.adminmenu4 , .subnav3 {
+		width:142px;
+	}
+	.clmain {
+		zoom:0.43;
+		position:absolute;
+		top:900px;
+		left:400px;
+	}
+	.addfrm {
+		zoom:0.4;
+		position:relative;
+		left:320px;
+	}
+	#senagogo {
+		width:150px;
+	}
+	#senagogo > div {
+		width:150px;
+	}
+	.cladmain {
+		position:relative;
+		left:-80px;
+		zoom:0.78;
+	}
+	#senagogo2 {
+		width:151px;
+	}
+	.subnav4 {
+		width:150px;
+	}
+	.clanfrm {
+		position:relative;
+		left:200px;
+		zoom:0.78;
+	}
+	.starfrm {
+		zoom:0.4;
+		position:absolute;
+		top:900px;
+		left:430px;
+	}
+	.cmnfrm {
+		zoom:0.5;
+		position:absolute;
+		left:330px;
+		top:600px;
+	}
+	.angfrm {
+		zoom:0.5;
+		position:relative;
+		left:320px;
+		top:400px;
+	}
+	.senat {
+		zoom:0.4;
+		position:relative;
+		top:50px;
+		left:70px;
+	}
+	.crpfrm {
+		zoom:0.57;
+		position:relative;
+		left:300px;
+	}
+	.visitfrm {
+		position:relative;
+		left:400px;
+	}
+	.jusicfrm {
+		position:relative;
+		left:250px;
+		zoom:0.85;
+	}
+	.coadfrm {
+		position:relative;
+		left:200px;
+	}	
+}
+
+@media (max-width: 800px) {
+	.imdif {
+		position:relative;
+		left:-60px;
+	}
+	.logodiv {
+		position:relative;
+		left:-200px;
+	}
+	#imdif_1 {
+		margin-left:100px;
+	}
+	.imdif2 {
+		zoom:0.36;
+		position:relative;
+		left:100px;
+	}
+	.usermainpage4 , .mainfrm4 , .mainfrm > ul , .mainfrm > ul > li , #ftaplusbtn {
+		zoom:0.35;
+		margin-left:100px;
+		margin-top:30px;
+	}
+	.mainfrm4 > ul > li:nth-child(5) {
+	width:170px;
+	}
+	.ftaplus {
+		position:relative;
+		left:535px;
+		top:-70px;
+	}
+	.frmut {
+		zoom:0.6;
+		margin-left:-400px;
+	}
+	.questfrm {
+		zoom:0.345;
+		margin-left:120px;
+		margin-top:400px;
+	}
+	.sena01 {
+		zoom:0.37;
+		position:relative;
+		left:55px;
+	}
+	#senana {
+		position:relative;
+		top:600px;
+		left:250px;
+		zoom:0.95;
+	}
+	.clmain {
+		zoom:0.36;
+		position:absolute;
+		top:1100px;
+		left:420px;
+	}
+	#senagogo {
+		width:150px;
+	}
+	#senagogo > div {
+		width:150px;
+	}
+	.cladmain {
+		position:relative;
+		left:-100px;
+		zoom:0.7;
+	}
+	.clanfrm {
+		position:relative;
+		left:200px;
+		zoom:0.7;
+	}
+	#listbtn1 {
+		position:relative;
+		top:402px;
+	}
+	#modibtn2 {
+		position:relative;
+		top:400px;
+		left:-270px;
+	}
+	.starfrm {
+		zoom:0.35;
+		position:absolute;
+		top:1100px;
+		left:450px;
+	}
+	.cmnfrm {
+		zoom:0.45;
+		position:absolute;
+		left:330px;
+		top:600px;
+	}
+	.angfrm {
+		zoom:0.48;
+		position:relative;
+		left:320px;
+		top:400px;
+	}
+	.senat {
+		zoom:0.35;
+		position:relative;
+		top:50px;
+		left:70px;
+	}
+	.crpfrm {
+		zoom:0.49;
+		position:relative;
+		left:300px;
+	}
+	.visitfrm {
+		position:relative;
+		left:350px;
+	}
+	.jusicfrm {
+		position:relative;
+		left:250px;
+		zoom:0.72;
+	}
+	.coadfrm {
+		position:relative;
+		left:200px;
+		zoom:0.93;
+	}
+}
+
+@media (max-width: 700px) {
+	.imdif {
+		zoom:0.3;
+		position:relative;
+		left:-100px;
+	}
+	.nav , .navadmin ,.subnav2 , .adminmenu2 , .adminmenu3 , .admin {
+		width:90px;
+		font-size:12px;
+	}
+	#logodiv {
+		zoom:1.1;
+	}
+	#logdiv , #logdiv_2 {
+		zoom:0.7;
+	}
+	#logdiv2 {
+		margin-left:10px;
+	}
+	.navuser {
+		font-size:15px;
+	}
+	.navuser_1 {
+		width:100px;
+		position:relative;
+		right:100px;
+	}
+	.imdif2 {
+		zoom:0.25;
+		position:relative;
+		left:20px;
+	}
+	#selectsh960 {
+		position:relative;
+		left:1300px;
+		top:-150px;
+	}
+	.usermainpage4 , .mainfrm4 , .mainfrm > ul , .mainfrm > ul > li , #ftaplusbtn {
+		zoom:0.3;
+		margin-left:10px;
+		margin-top:100px;
+	}
+	.mainfrm4 > ul > li:nth-child(5) {
+	width:163px;
+	}
+	.ftaplus {
+		position:relative;
+		left:455px;
+	}
+	.frmut {
+		zoom:0.5;
+		margin-left:-500px;
+		margin-top:200px;
+	}
+	.questfrm {
+		zoom:0.3;
+		margin-left:80px;
+		margin-top:700px;
+	}
+	.sena01 {
+		zoom:0.3;
+		position:relative;
+		left:55px;
+	}
+	.navuser {
+		font-size:15px;
+	}
+	.navuser_1 {
+		font-size:13px;
+	}
+	.adminmenu4 , .subnav3 {
+		width:82px;
+		font-size:15px;
+	}
+	.clmain {
+		zoom:0.3;
+		position:absolute;
+		top:1400px;
+		left:420px;
+	}
+	.addfrm {
+		zoom:0.35;
+		position:relative;
+		left:320px;
+	}
+	#senagogo {
+		width:90px;
+	}
+	#senagogo > div {
+		width:90px;
+	}
+	.cladmain {
+		position:relative;
+		left:-200px;
+		zoom:0.7;
+	}
+	#senagogo2 {
+		width:91px;
+	}
+	.subnav4 {
+		width:90px;
+		font-size:15px;
+	}
+	.clanfrm {
+		position:relative;
+		left:200px;
+		zoom:0.6;
+	}
+	#listbtn1 {
+		position:relative;
+		top:100px;
+	}
+	#modibtn2 {
+		position:relative;
+		top:100px;
+		left:-60px;
+	}
+	.starfrm {
+		zoom:0.3;
+		position:absolute;
+		top:1100px;
+		left:450px;
+	}
+	.cmnfrm {
+		zoom:0.4;
+		position:absolute;
+		left:330px;
+		top:600px;
+	}
+	.angfrm {
+		zoom:0.4;
+		position:relative;
+		left:320px;
+		top:400px;
+	}
+	.senat {
+		zoom:0.32;
+		position:relative;
+		top:50px;
+		left:70px;
+	}
+	.crpfrm {
+		zoom:0.40;
+		position:relative;
+		left:300px;
+	}
+	.visitfrm {
+		position:relative;
+		left:300px;
+	}
+	.jusicfrm {
+		position:relative;
+		left:200px;
+		zoom:0.7;
+	}
+	.coadfrm {
+		position:relative;
+		left:150px;
+		zoom:0.9;
+	}
+}
+
+@media (max-width: 650px) {
+	.logdiv2 {
+		margin-left:0;
+	}
+	.usermainpage4 , .mainfrm4 , .mainfrm > ul , .mainfrm > ul > li , .ftaplus {
+		zoom:0.25;
+		margin-left:50px;
+		margin-top:300px;
+	}
+	.mainfrm4 > ul > li:nth-child(5) {
+	width:155px;
+	}
+	.ftaplus {
+		position:relative;
+		left:1630px;
+		top:-280px;
+	}
+	.questfrm {
+		zoom:0.25;
+		margin-left:80px;
+		margin-top:700px;
+	}
+	.sena01 {
+		zoom:0.25;
+		position:relative;
+		left:55px;
+		top:100px;
+	}
+	.clmain {
+		zoom:0.28;
+		position:absolute;
+		top:1400px;
+		left:310px;
+	}
+	.addfrm {
+		zoom:0.3;
+		position:relative;
+		left:210px;
+	}
+	.cladmain {
+		position:relative;
+		left:-190px;
+		zoom:0.55;
+	}
+	.clanfrm {
+		position:relative;
+		left:160px;
+		zoom:0.5;
+	}
+	.starfrm {
+		zoom:0.25;
+		position:absolute;
+		top:1400px;
+		left:400px;
+	}
+	.cmnfrm {
+		zoom:0.3;
+		position:absolute;
+		left:300px;
+		top:1000px;
+	}
+	.angfrm {
+		zoom:0.35;
+		position:relative;
+		left:240px;
+		top:400px;
+	}
+	.senat {
+		zoom:0.27;
+		position:relative;
+		top:50px;
+		left:0px;
+	}
+	.crpfrm {
+		zoom:0.35;
+		position:relative;
+		left:250px;
+	}
+	.visitfrm {
+		position:relative;
+		left:200px;
+	}
+	.jusicfrm {
+		position:relative;
+		left:160px;
+		zoom:0.58;
+	}
+	.coadfrm {
+		position:relative;
+		left:120px;
+		zoom:0.75;
+	}
+}

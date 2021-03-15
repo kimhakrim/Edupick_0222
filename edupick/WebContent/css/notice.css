@@ -12,12 +12,14 @@
 	max-width: 800px;
 	padding: 50px;
 	margin: 0 auto;
-	background: #ffffff;}
+	background: #ffffff;
+	margin-top:100px;
+}
 
 section {
 	font-family:"맑은 고딕";
 	padding: 20px 0 0;
-	height:1000px;}
+	height:1200px;}
 
 #content1{
 	height:500px;
@@ -160,4 +162,10 @@ td{
 	border:3px solid white;
 	position:relative;
 	top:10px;
+}
+
+#topmenumain {
+	width:100%;
+	position:absolute;
+	top:240px;
 }

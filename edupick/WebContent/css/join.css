@@ -41,3 +41,19 @@ input[value=회원가입], input[value=다시쓰기]{
 	font-size:20px;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
+#addressnum{
+	padding:0;
+	height:20px;
+}
+#addressva{
+	height:20px;
+}
+
+header {
+	margin-top:0px;
+	height:270px;
+}
+
+#topmenumain {
+	margin-top:100px;
+}

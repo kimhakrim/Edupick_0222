@@ -4,6 +4,10 @@
 <%@ page import = "service.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%  
+   String mName = (String)request.getAttribute("loginname");
+   String lName = (String)request.getAttribute("loginname");
+%>
+<%  
 	String loginname = (String)session.getAttribute("loginname");
 %>
 <html>
@@ -21,11 +25,11 @@
 		<script type="text/javacript" src="<%= request.getContextPath() %>/js/pagepush.js"></script>
 		<link href="<%= request.getContextPath() %>/css/top.css" rel="stylesheet" type="text/css" />
 		<script src="<%= request.getContextPath() %>/js/top.js"></script>
-		<link href="<%= request.getContextPath() %>/css/edupickla.css" rel="stylesheet" type="text/css" />
 		<link href="<%= request.getContextPath() %>/css/edupickmain.css" rel="stylesheet" type="text/css" />
 		<link href="<%= request.getContextPath() %>/css/rp.css" rel="stylesheet" type="text/css" />
 		<link href="<%= request.getContextPath() %>/css/edupicksearch.css" rel="stylesheet" type="text/css" />
 		<script src="<%= request.getContextPath() %>/js/edupicksearch.js"></script>
+		<link href="<%= request.getContextPath() %>/css/edupickla.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body style="overflow-x:hidden; overflow-y:scroll;"> 
 		<header>
@@ -424,33 +428,45 @@
 					<p id="subject13">제2외국어</p>
 				</div>
 			</form>
-			<hr class="hr03" style="border:1px solid #BDBDBD;" role="presentation" />
 			<div id="topmenumain">
-				<ul id="topmenu">
-					<li style="margin-left:-5%;">
+				<ul>
+					<li>
 						<a href="<%= request.getContextPath() %>/Institute/institute.do" class="menua">학원찾기</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Notice/notice.do" class="menua">공지사항</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Eduinformation/eduinformation.do" class="menua">교육정보</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Customerservice/customerservice.do" class="menua">고객센터</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Myservice/myservice.do" class="menua">My 서비스</a>
 					</li>
 				</ul>
 			</div>
-			<hr class="hr01" style="border:1px solid #F2F2F2;"/>
 		</header>
 		<section>
 			<article>
 				<c:if test="${empty sessionScope.loginname}">
 				<div class="imgbanner">
-					<img src="<%= request.getContextPath() %>/webimage/thief.png" id="img5">
+					<img src="<%= request.getContextPath() %>/webimage/event11.jpg" id="img5">
+					<img src="<%= request.getContextPath() %>/webimage/event22.jpg" id="img5_2">
+					<span id="movebanner">◀</span>
+					<span id="movebanner2">▶</span>
+				</div>
+				<div class="imgbanner2">
+					<img src="<%= request.getContextPath() %>/webimage/event33.jpg" id="img5">
+					<img src="<%= request.getContextPath() %>/webimage/event44.jpg" id="img5_2">
+					<span id="movebanner3">◀</span>
+					<span id="movebanner4">▶</span>
+				</div>
+				<div class="imgbanner3">
+					<img src="<%= request.getContextPath() %>/webimage/event55.jpg" id="img5">
+					<span id="movebanner5">◀</span>
+					<span id="movebanner6">▶</span>
 				</div>
 				<div class="login">
 					<div class="lognbt">
@@ -473,25 +489,42 @@
 				</c:if>
 				
 				<c:if test="${not empty sessionScope.loginname}">
-				<div class="loginafter">
+				<div class="imgbanner">
+					<img src="<%= request.getContextPath() %>/webimage/event11.jpg" id="img5">
+					<img src="<%= request.getContextPath() %>/webimage/event22.jpg" id="img5_2">
+					<span id="movebanner">◀</span>
+					<span id="movebanner2">▶</span>
+				</div>
+				<div class="imgbanner2">
+					<img src="<%= request.getContextPath() %>/webimage/event33.jpg" id="img5">
+					<img src="<%= request.getContextPath() %>/webimage/event44.jpg" id="img5_2">
+					<span id="movebanner3">◀</span>
+					<span id="movebanner4">▶</span>
+				</div>
+				<div class="imgbanner3">
+					<img src="<%= request.getContextPath() %>/webimage/event55.jpg" id="img5">
+					<span id="movebanner5">◀</span>
+					<span id="movebanner6">▶</span>
+				</div>
+				<div class="loginafter" style="height:220px;">
 					<div class="lofer1">
-						<img src="<%= request.getContextPath() %>/webimage/user.png" name = loginname id="userimg1"><%=loginname %> 님 <img src="<%= request.getContextPath() %>/webimage/login4.jpg" id="userimg2">
-						
+						<img src="<%= request.getContextPath() %>/webimage/user.png" name = loginname id="userimg1"><%=loginname %> 님 
+						<img src="<%= request.getContextPath() %>/webimage/login4.jpg" id="userimg2">						
 						<button type="button" onclick="location.href='<%= request.getContextPath() %>/Common/logout.do'" style="background:white;">로그아웃</button><br>
-						
-						<a href="<%= request.getContextPath() %>/Common/Modify.do" id="modify">회원정보 수정</a><img src="<%= request.getContextPath() %>/webimage/login3.jpg" style="width:10%; height:10%;">
+						<a href="<%= request.getContextPath() %>/Admin/admin.do">관리하기</a>
+						<a href="<%= request.getContextPath() %>/Common/Modify.do" id="modify">회원정보 수정</a><img src="<%= request.getContextPath() %>/webimage/login3.jpg" style="width:10%; height:20%;">
 					</div>
 					<div class="lofer2">
-						<div class="mypoint">Mypoint</div><img src="<%= request.getContextPath() %>/webimage/point.png" style="width:7%; height:7%; float:right; margin-top:-25px;">
+						<div class="mypoint">Mypoint</div><img src="<%= request.getContextPath() %>/webimage/point.png" style="width:7%; height:20px; float:right; margin-top:-25px;">
 					</div>
 					<div class="lofer3">
-						<a href="#" id="logalink">수강중</a>
+						<a href="<%= request.getContextPath() %>/Myservice/myservice.do" id="logalink">수강중</a>
 					</div>
 					<div class="lofer3_2">
-						<a href="#" id="logalink">장바구니</a>
+						<a href="<%= request.getContextPath() %>/Myservice/cart.do" id="logalink">장바구니</a>
 					</div>
 					<div class="lofer3_3">
-						<a href="#" id="logalink">찜</a>
+						<a href="<%= request.getContextPath() %>/Myservice/myservice.do" id="logalink">찜</a>
 					</div>
 				</div>
 				<div class="subbanner_main">
@@ -499,7 +532,7 @@
 					<img id="img9" src="<%= request.getContextPath() %>/webimage/com.png">
 				</div>
 				<div class="quizdiv">
-					<a href="#" onclick="window.open('Quiz.html','window','width=580,height=300,left=670,top=400,resizable=no,scrollbars=no');return false"><img src="quiz.png" style="width:30%; height:3%;">오늘의 퀴즈</a>
+					<a href="#" onclick="window.open('Quiz.html','window','width=580,height=300,left=670,top=400,resizable=no,scrollbars=no');return false"><img src="<%= request.getContextPath() %>/webimage/quiz.png" style="width:60px; height:60px;">오늘의 퀴즈</a>
 				</div>
 				</c:if>
 				

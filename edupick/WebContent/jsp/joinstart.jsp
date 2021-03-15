@@ -12,7 +12,8 @@
 		<link href="<%= request.getContextPath() %>/css/top.css" rel="stylesheet" type="text/css" />
 		<script src="<%= request.getContextPath() %>/js/top.js"></script>
 		<link href="<%= request.getContextPath() %>/css/joinstart.css" rel="stylesheet" type="text/css" />	
-		<link href="<%= request.getContextPath() %>/css/rp.css" rel="stylesheet" type="text/css" />	
+		<link href="<%= request.getContextPath() %>/css/rp.css" rel="stylesheet" type="text/css" />
+		<link href="<%= request.getContextPath() %>/css/error.css" rel="stylesheet" type="text/css" />	
 	</head>
 	<body style="overflow-x:hidden; overflow-y:scroll;">                            
 		<header>
@@ -22,28 +23,24 @@
 				<img class="img1" src="<%= request.getContextPath() %>/webimage/edupick2.jpg">	
 				</a>
 			</div>
-			<div class="mediaheader">
-			<hr class="tophr_1" style="border:1px solid #BDBDBD;" role="presentation" />
 			<div id="topmenumain">
-				<ul id="topmenu">
-					<li style="margin-left:-5%;">
+				<ul>
+					<li>
 						<a href="<%= request.getContextPath() %>/Institute/institute.do" class="menua">학원찾기</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Notice/notice.do" class="menua">공지사항</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Eduinformation/eduinformation.do" class="menua">교육정보</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Customerservice/customerservice.do" class="menua">고객센터</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Myservice/myservice.do" class="menua">My 서비스</a>
 					</li>
 				</ul>
-			</div>
-			<hr class="tophr_2" style="border:1px solid #F2F2F2;"/>
 			</div>
 		</header>
 		<section>

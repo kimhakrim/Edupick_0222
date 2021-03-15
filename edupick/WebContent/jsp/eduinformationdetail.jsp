@@ -35,30 +35,25 @@
 			<div class="logoutdiv">
 			<%=session.getAttribute("loginname")%> <a href="<%= request.getContextPath() %>/Common/logout.do">로그아웃</a><img src="<%= request.getContextPath() %>/webimage/알림.png" style="width:10%; height:10%;">
 			</div>
-			<!-- header top hr -->
-			<hr class="hr03" style="border:1px solid #BDBDBD;" role="presentation" />
-			<!-- hr 안에 메뉴 -->
 			<div id="topmenumain">
-				<ul id="topmenu">
-					<li style="margin-left:-5%;">
+				<ul>
+					<li>
 						<a href="<%= request.getContextPath() %>/Institute/institute.do" class="menua">학원찾기</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Notice/notice.do" class="menua">공지사항</a>
 					</li>
-					<li style="margin-left:10%;">
-						<a href="<%= request.getContextPath() %>/Eduinformation/eduinformation.do" class="menua">교육정보</a>
+					<li>
+						<a href="<%= request.getContextPath() %>/Eduinformation/eduinformation.do" class="menua" style="background:#FA5858">교육정보</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Customerservice/customerservice.do" class="menua">고객센터</a>
 					</li>
-					<li style="margin-left:10%;">
+					<li>
 						<a href="<%= request.getContextPath() %>/Myservice/myservice.do" class="menua">My 서비스</a>
 					</li>
 				</ul>
 			</div>
-			<!-- header bottom hr -->
-			<hr class="hr01" style="border:1px solid #F2F2F2;"/>
 		</header>
 		<section>
 			<article class="nectmain">
@@ -114,7 +109,6 @@
 			</article>	
 		</section>
 		<button onclick="topFunction()" id="scrollTopBtn" title="Go to top">▲TOP</button>
-		<button onclick="topFunction()" id="scrollTopBtnMob" title="Go to top">▲Top</button>
 		<footer>
 			<!-- footer hr -->
 			<hr class="hr02">

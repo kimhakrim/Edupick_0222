@@ -1,10 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%  
+	String loginname = (String)session.getAttribute("loginname");
+%>    
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset ="UTF-8">
-		<title>EduPick 학원검색 | 학원찾기</title>
+<head>
+<meta charset="UTF-8">
+<title>EduPick 학원검색 | 학원찾기</title>
 		<!-- 폰트 -->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
@@ -29,8 +33,8 @@
 		<!-- 검색 css js -->
 		<link href="<%= request.getContextPath() %>/css/edupicksearch.css" rel="stylesheet" type="text/css" />
 		<script src="<%= request.getContextPath() %>/js/edupicksearch.js"></script>
-		<link href="<%= request.getContextPath() %>/css/findinstitute.css" rel="stylesheet" type="text/css" />
-		<script src="<%= request.getContextPath() %>/js/findinstitute.js"></script>
+		<link href="<%= request.getContextPath() %>/css/institute.css" rel="stylesheet" type="text/css" />
+		<script src="<%= request.getContextPath() %>/js/institute.js"></script>
 	</head>
 	<body style="overflow-x:hidden; overflow-y:scroll;"> 
 		<header>
@@ -41,7 +45,7 @@
 				</a>
 			</div>
 			<div class="logoutdiv">
-				○○○(님) <a href="<%= request.getContextPath() %>/Common/logout.do">로그아웃</a><img src="<%= request.getContextPath() %>/webimage/alert.png" style="width:10%; height:10%;">
+				<%= loginname %> <a href="#">로그아웃</a><img src="<%= request.getContextPath() %>/webimage/알림.png" style="width:10%; height:10%;">
 			</div>
 			<!-- 검색 폼 -->
 			<form class="frmsh">
@@ -444,7 +448,7 @@
 						<a href="<%= request.getContextPath() %>/Institute/institute.do" class="menua" style="background:#FA5858">학원찾기</a>
 					</li>
 					<li>
-						<a href="<%= request.getContextPath() %>/Notice/notie.do" class="menua">공지사항</a>
+						<a href="<%= request.getContextPath() %>/Notice/notice.do" class="menua">공지사항</a>
 					</li>
 					<li>
 						<a href="<%= request.getContextPath() %>/Eduinformation/eduinformation.do" class="menua">교육정보</a>

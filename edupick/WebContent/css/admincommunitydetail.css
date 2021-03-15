@@ -1,11 +1,16 @@
-﻿.cmnfrm {
+﻿article {
+	height:900px;
+}
+
+.cmnfrm {
 	width:1200px;
 	height:780px;
 	position:relative;
-	top:250px;
+	top:150px;
 	left:400px;
 	line-height:30px;
 }
+
 li{
 	list-style:none;
 	border:1px solid black;
@@ -34,7 +39,7 @@ ul:nth-child(5) li:first-child {
 	background:#DBDBDB;
 	position:absolute;
 	left:40px;
-	top:82px;
+	top:-22px;
 	line-height:50px;
 }
 button {

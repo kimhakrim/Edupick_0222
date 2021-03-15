@@ -416,4 +416,40 @@
 			$(".agemain").css("display","none");
 		}
 	});
+	
+	// -------------------------------------------------------------------
+	
+	$("#movebanner").click(function(){
+		$(".imgbanner").css("display","none");
+		$(".imgbanner3").css("display","block");
 	});
+	
+	$("#movebanner2").click(function(){
+		$(".imgbanner").css("display","none");
+		$(".imgbanner2").css("display","block");
+	});
+	
+	$("#movebanner3").click(function(){
+		$(".imgbanner").css("display","block");
+		$(".imgbanner2").css("display","none");
+	});
+	
+	$("#movebanner4").click(function(){
+		$(".imgbanner").css("display","none");
+		$(".imgbanner2").css("display","none");
+		$(".imgbanner3").css("display","block");
+	});
+	
+	$("#movebanner5").click(function(){
+		$(".imgbanner").css("display","none");
+		$(".imgbanner2").css("display","block");
+		$(".imgbanner3").css("display","none");
+	});
+	
+	$("#movebanner6").click(function(){
+		$(".imgbanner").css("display","block");
+		$(".imgbanner2").css("display","none");
+		$(".imgbanner3").css("display","none");
+	});
+		
+});

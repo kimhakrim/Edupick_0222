@@ -1,22 +1,23 @@
-﻿.loginafter{
+.loginafter{
 	border:2px dashed orange;
-	min-width:300px;
-	max-width:300px;
-	min-height:200px;
-	max-height:200px;
+	width:300px;
+	height:220px;
 	text-align:center;
 	margin-left:1200px;
 	margin-top:-300px;
+	position:absolute;
 }
 .lofer1{
 	border-bottom:1px solid orange;
+	height:130px;
 }
 .lofer2{
 	border-bottom:1px solid orange;
+	height:30px;
 }
 .lofer3{
 	width:100px;
-	height:65px;
+	height:50px;
 	text-align:center;
 	border-right:1px solid orange;
 	float:left;
@@ -24,7 +25,7 @@
 }
 .lofer3_2{
 	width:100px;
-	height:65px;
+	height:50px;
 	text-align:center;
 	border-right:1px solid orange;
 	margin-left:100px;
@@ -32,10 +33,10 @@
 }
 .lofer3_3{
 	width:96px;
-	height:65px;
+	height:50px;
 	text-align:center;
 	float:right;
-	margin-top:-65px;
+	margin-top:-50px;
 	margin-left:20px;
 	padding-top:15px;
 }
@@ -57,7 +58,7 @@ a{
 	font-size:20px;
 }
 #modify{
-	margin-left:180px;
+	margin-left:50px;
 	zoom:0.8;
 }
 .mypoint{
@@ -69,6 +70,7 @@ a{
 }
 .quizdiv{
 	width:200px;
+	height:60px;
 	position:fixed;
 	left:90%;
 	bottom:30%;

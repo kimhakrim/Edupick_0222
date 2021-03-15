@@ -44,7 +44,7 @@
 
 		는(은) 사용 가능 합니다.<p/>
 
-		<a href="#" onclick = " window.close();"><button type="button" style="border:1px solid black; background:white;">확인</button></a>
+		<a href="#" onclick = "window.close();"><button type="button" style="border:1px solid black; background:white;">확인</button></a>
 
 <%	} %>
 

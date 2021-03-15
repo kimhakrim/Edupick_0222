@@ -1,5 +1,5 @@
 ﻿.usermainpage{
-	width:1600px;
+	width:1500px;
 	height:800px;
 	position:absolute;
 	top:250px;
@@ -22,8 +22,7 @@
 	display:none;
 }
 .usermainpage4{
-	width:1600px;
-	height:800px;
+	height:40px;
 	position:absolute;
 	top:250px;
 	left:280px;
@@ -81,7 +80,7 @@
 }
 .shfrm{
 	height:40px;
-	margin-top:30px;
+	width:1000px;
 }
 .userup{
 	width:800px;
@@ -298,4 +297,83 @@ td > button {
  
 #btbt22 {
 	margin-left:10px;
+}
+
+.adminmenu3{
+	height:480px;
+	width:245px;
+	position:absolute;
+	top:560px;
+	left:-240px;
+	margin-left:238px;
+	border:1px solid gray;
+}
+
+.subnav2{
+	border-right:1px solid gray;
+	background:#BDBDBD;
+	width:245px;
+	height:80px;
+	float:left;
+	text-align:center;
+	font-size:25px;
+	line-height:70px;
+	cursor:pointer;
+	border:1px solid black;
+}
+
+.subnav3{
+	border-right:1px solid gray;
+	background:#BDBDBD;
+	width:237px;
+	height:80px;
+	float:left;
+	text-align:center;
+	font-size:25px;
+	line-height:70px;
+	cursor:pointer;
+	border:1px solid black;
+}
+
+.adminmenu4{
+	height:480px;
+	width:238px;
+	position:absolute;
+	top:560px;
+	left:-240px;
+	margin-left:238px;
+	border:1px solid gray;
+}
+
+.subnav4{
+	border-right:1px solid gray;
+	background:#BDBDBD;
+	width:245px;
+	height:80px;
+	float:left;
+	text-align:center;
+	font-size:25px;
+	line-height:70px;
+	cursor:pointer;
+	border:1px solid black;
+}
+
+.herdiv {
+	width:auto;
+}
+
+#shmove1 {
+	position:relative;
+	left:300px;
+	top:10px;
+}
+
+#shmove2 {
+	position:relative;
+	left:1500px;
+	top:50px;
+}
+
+.adminmenu4 {
+	display:none;
 }
