@@ -1,0 +1,40 @@
+﻿.pagecode {
+	height:100px;
+	width:1430px;
+	position:relative;
+	left:60px;
+}
+
+.pagecode > ul > li {
+	list-style:none;
+	border:1px solid black;
+	width:450px;
+	height:35px;
+	float:left;
+	text-align:center;
+	line-height:28px;
+	font-size:20px;
+	font-weight:700;
+}
+
+li:nth-child(1) , li:nth-child(2) , li:nth-child(3) {
+	background:#A4A4A4;
+}
+
+#codeput {
+	width:442px;
+	height:29px;
+	text-align:center;
+}
+
+.userup {
+	position:relative;
+	top:-15px;
+	left:1236px;
+}
+
+#clplus_3 {
+	position:relative;
+	top:45px;
+	right:50px;
+}

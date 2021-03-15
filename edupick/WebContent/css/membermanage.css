@@ -1,0 +1,173 @@
+﻿.usermainpage{
+	width:1600px;
+	height:800px;
+	position:absolute;
+	top:250px;
+	left:280px;
+}
+.usermainpage2{
+	width:1600px;
+	height:800px;
+	position:absolute;
+	top:250px;
+	left:280px;
+	display:none;
+}
+.usermainpage3{
+	width:1600px;
+	height:800px;
+	position:absolute;
+	top:250px;
+	left:280px;
+	display:none;
+}
+.selectsh0{
+	zoom:1.5;
+	margin-left:200px;
+	margin-right:-180px;
+	float:left;
+}
+.selectsh{
+	zoom:1.5;
+	margin-left:200px;
+	float:left;
+}
+.selectsh2{
+	zoom:1.25;
+	padding-top:2px;
+	margin-left:30px;
+	width:230px;
+	float:left;
+}
+.selectsh3{
+	zoom:0.25;
+	width:150px;
+	margin-left:30px;
+	float:left;
+}
+.shfrm{
+	height:40px;
+	margin-top:30px;
+}
+.userup{
+	width:800px;
+	height:30px;
+	position:absolute;
+	top:340px;
+	left:350px;
+}
+.userup2{
+	width:800px;
+	height:30px;
+	position:absolute;
+	top:340px;
+	left:350px;
+	display:none;
+}
+.userup3{
+	width:800px;
+	height:30px;
+	position:absolute;
+	top:340px;
+	left:350px;
+	display:none;
+}
+.userup > div{
+	float:left;
+	font-size:20px;
+	margin-left:120px;
+}
+.userup > div > button {
+	zoom:1.2;
+	background:white;
+	border: 2px solid black;
+}
+.userup2 > div{
+	float:left;
+	font-size:20px;
+	margin-left:120px;
+}
+.userup2 > div > button {
+	zoom:1.2;
+	background:white;
+	border: 2px solid black;
+}
+.userup3 > div{
+	float:left;
+	font-size:20px;
+	margin-left:120px;
+}
+.userup3 > div > button {
+	zoom:1.2;
+	background:white;
+	border: 2px solid black;
+}
+.mainfrm{
+	position:absolute;
+	top:400px;
+	left:350px;
+	width:1400px;
+	height:640px;
+}
+.mainfrm2{
+	position:absolute;
+	top:400px;
+	left:350px;
+	width:1400px;
+	height:640px;
+	display:none;
+}
+.mainfrm3{
+	position:absolute;
+	top:400px;
+	left:350px;
+	width:1400px;
+	height:640px;
+	display:none;
+}
+#table1 > th{
+	background:#A4A4A4;
+	border:3px solid white;
+}
+.maintable{
+	width:1400px;
+	height:580px;
+	border-collapse:collapse;
+}
+td{
+	border-bottom:1px solid black;
+	text-align:center;
+}
+td > button {
+	background:white;
+	border:1px solid black;
+}
+#divPaging {
+	clear:both; 
+	margin:0 auto; 
+	width:300px; 
+	height:50px;
+	margin-top:20px;		
+}
+#divPaging > div {
+	float:left;
+	width: 30px;
+	margin:0 auto;
+	text-align:center;
+ }
+ a{
+	color:black;
+	text-decoration:none;
+ }
+ .navuser{
+	font-size:25px;
+	margin-top:10px;
+	margin-left:10px;
+	cursor:pointer;
+ }
+ .navuser_1{
+	font-size:20px;
+	margin-left:100px;
+	margin-top:20px;
+	display:none;
+ }
