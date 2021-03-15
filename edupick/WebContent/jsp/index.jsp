@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="<%=request.getContextPath() %>/Common/intro.do">edupick 바로가기 testdddddd</a>
+	<a href="<%=request.getContextPath() %>/Common/intro.do">edupick 바로가기 </a>
 </body>
 </html>

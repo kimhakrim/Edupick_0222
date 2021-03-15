@@ -488,7 +488,7 @@
 				</div>
 				</c:if>
 				
-				<c:if test="${not empty sessionScope.loginname}">
+				<c:if test="${not empty sessionScope.loginname && userType == 'M'}">
 				<div class="imgbanner">
 					<img src="<%= request.getContextPath() %>/webimage/event11.jpg" id="img5">
 					<img src="<%= request.getContextPath() %>/webimage/event22.jpg" id="img5_2">
@@ -536,6 +536,41 @@
 				</div>
 				</c:if>
 				
+				<c:if test="${not empty sessionScope.loginname && userType == 'L'}">
+				<div class="imgbanner">
+					<img src="<%= request.getContextPath() %>/webimage/event11.jpg" id="img5">
+					<img src="<%= request.getContextPath() %>/webimage/event22.jpg" id="img5_2">
+					<span id="movebanner">◀</span>
+					<span id="movebanner2">▶</span>
+				</div>
+				<div class="imgbanner2">
+					<img src="<%= request.getContextPath() %>/webimage/event33.jpg" id="img5">
+					<img src="<%= request.getContextPath() %>/webimage/event44.jpg" id="img5_2">
+					<span id="movebanner3">◀</span>
+					<span id="movebanner4">▶</span>
+				</div>
+				<div class="imgbanner3">
+					<img src="<%= request.getContextPath() %>/webimage/event55.jpg" id="img5">
+					<span id="movebanner5">◀</span>
+					<span id="movebanner6">▶</span>
+				</div>
+				<div class="loginafter" style="height:220px;">
+					<div class="lofer1">
+						<img src="<%= request.getContextPath() %>/webimage/user.png" name = loginname id="userimg1"><%=loginname %> 님 
+						<img src="<%= request.getContextPath() %>/webimage/login4.jpg" id="userimg2">						
+						<button type="button" onclick="location.href='<%= request.getContextPath() %>/Common/logout.do'" style="background:white;">로그아웃</button><br>
+						<a href="<%= request.getContextPath() %>/Admin/admin.do">관리하기</a>
+						<a href="<%= request.getContextPath() %>/Common/Modify.do" id="modify">회원정보 수정</a><img src="<%= request.getContextPath() %>/webimage/login3.jpg" style="width:10%; height:20%;">
+					</div>
+				</div>
+				<div class="subbanner_main">
+					수강생들이 Pick한 Hot Place
+					<img id="img9" src="<%= request.getContextPath() %>/webimage/com.png">
+				</div>
+				<div class="quizdiv">
+					<a href="#" onclick="window.open('Quiz.html','window','width=580,height=300,left=670,top=400,resizable=no,scrollbars=no');return false"><img src="<%= request.getContextPath() %>/webimage/quiz.png" style="width:60px; height:60px;">오늘의 퀴즈</a>
+				</div>
+				</c:if>
 				
 				<div class="subbanner">
 				<div class="slideshow-container">
