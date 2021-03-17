@@ -1,6 +1,6 @@
 package service;
 
-import java.sql.Connection;
+import java.sql.Connection; 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -83,12 +83,31 @@ public class LicenseeDao {
 		}
 		System.out.println("value logincheck->"+value2);
 		return value2;
+//}
+//public String getName(String lName, String lPwd) {
+//	
+//	String name = null;
+//	try {
+//	String sql = "select lname from licensee where lid=? and lpwd=?";
+//	pstmt = conn.prepareStatement(sql);
+//	pstmt.setString(1, lName);
+//	pstmt.setString(2, lPwd);
+//	ResultSet rs = pstmt.executeQuery();
+//	
+//	if(rs.next()) {
+//	name = rs.getString("lname");
+//	}
+//	}catch(Exception e) {
+//		System.out.println("해당하는 사람이 존재하지 않습니다.");
+//	}
+//	return name;
+
 }
 public String getName(String lName, String lPwd) {
-	
+	LicenseeVo lv = new LicenseeVo();
 	String name = null;
 	try {
-	String sql = "select lname from licensee where lid=? and lpwd=?";
+	String sql = "select lname,lgrade from licensee where lid=? and lpwd=?";
 	pstmt = conn.prepareStatement(sql);
 	pstmt.setString(1, lName);
 	pstmt.setString(2, lPwd);
@@ -96,13 +115,18 @@ public String getName(String lName, String lPwd) {
 	
 	if(rs.next()) {
 	name = rs.getString("lname");
+	lv.setLgrade("lgrade");
 	}
 	}catch(Exception e) {
 		System.out.println("해당하는 사람이 존재하지 않습니다.");
 	}
-	return name;
+	return name;	
 
-	}public String findId(String lName, String lTel) {
+
+
+
+
+}public String findId(String lName, String lTel) {
 	
 		String id = null;
 		try {

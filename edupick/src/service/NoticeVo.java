@@ -7,11 +7,12 @@ public class NoticeVo {
 	private String ncontent;
 	private String nwirter;
 	private String nwirteday;
+	private String ncategory;
 	private int nhit;
 	private boolean nimage;
 	private String nfile;
 	private String ndelyn;
-	
+
 	
 	
 	public int getNidx() {
@@ -43,6 +44,12 @@ public class NoticeVo {
 	}
 	public void setNwirteday(String nwirteday) {
 		this.nwirteday = nwirteday;
+	}
+	public String getNcategory() {
+		return ncategory;
+	}
+	public void setNcategory(String ncategory) {
+		this.ncategory = ncategory;
 	}
 	public int getNhit() {
 		return nhit;

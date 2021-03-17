@@ -80,7 +80,7 @@ if(userType.equals("M")){
       <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
          <script src="<%= request.getContextPath() %>/js/address.js"></script>
       <script src="<%= request.getContextPath() %>/js/modifyAction.js"></script>
-      <!--  <script src="<%= request.getContextPath() %>/js/lmodifyAction.js"></script> -->
+      <!--  <script src="<%= request.getContextPath() %>/js/modifyIsSames.js"></script>-->
    </head>
    <body style="overflow-x:hidden; overflow-y:scroll;">
       <header>
@@ -125,7 +125,7 @@ if(userType.equals("M")){
                          	  비밀번호 확인
                         </td>
                         <td>
-                           <input  type="password" name="modipwdcheck" id="modipwdcheck">
+                           <input  type="password" name="modipwdcheck" id="modipwdcheck"><span id="same"></span>
                         </td>
                      </tr>
                      <tr>
@@ -234,7 +234,7 @@ if(userType.equals("M")){
             </fieldset>
             </c:if>
             
-            <c:if test="${userType eq 'L'}">
+            <c:if test="${userType eq 'L' || userType eq 'A'}">
             <fieldset name="joinfed">
                <form name="regFrm02" value="licensee">
                   <input type = "hidden" name="lidx" value="<%=lv.getLidx()%>">
@@ -257,7 +257,7 @@ if(userType.equals("M")){
                            	비밀번호 확인
                         </td>
                         <td>
-                           <input  type="password" name="modipwdcheck" id="modipwdcheck">
+                           <input  type="password" name="modipwdcheck" id="modipwdcheck"><span id="same"></span>
                         </td>
                      </tr>
                      
@@ -310,6 +310,8 @@ if(userType.equals("M")){
                               <option >google.com</option>
                               
                            </select>
+                           
+                           
                         </td>
                      </tr>
                      <tr>

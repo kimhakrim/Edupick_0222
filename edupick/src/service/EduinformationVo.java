@@ -7,6 +7,7 @@ public class EduinformationVo {
 	private String econtent;
 	private String ewirter;
 	private String ewirteday;
+	private String ecategory;
 	private int ehit;
 	private boolean eimage;
 	private String efile;
@@ -66,4 +67,11 @@ public class EduinformationVo {
 	public void setEdelyn(String edelyn) {
 		this.edelyn = edelyn;
 	}
+	public String getEcategory() {
+		return ecategory;
+	}
+	public void setEcategory(String ecategory) {
+		this.ecategory = ecategory;
+	}
+
 }

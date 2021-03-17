@@ -1,6 +1,6 @@
 package controller;
 
-import java.io.IOException;   
+import java.io.IOException;    
 import java.net.InetAddress;
 
 import javax.servlet.RequestDispatcher;
@@ -77,7 +77,6 @@ import service.LicenseeDao;
          System.out.println("lEmail"+lEmail);
          System.out.println("lEmail1"+lEmail1);
          System.out.println("lEmail2"+lEmail2);
-      
          System.out.println("lTel"+lTel);
          System.out.println("lTel1"+lTel1);
          System.out.println("lTel2"+lTel2);

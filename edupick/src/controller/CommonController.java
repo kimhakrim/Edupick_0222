@@ -134,8 +134,13 @@ public class CommonController extends HttpServlet{
                session.setAttribute("loginname", lName);
                session.setAttribute("lId" , lId);
                session.setAttribute("userType", "L");
-               session.setAttribute("userType", "A");
+              
+    
+               // 로그인 정보 가져올때 회원 이름 및 회원 관리자 여부 필드 까지 포함해서 vo로 담아옴
+               // vo에 있는 각각 정보 session에 set해주는데 이때, 만약 vo 정보 중 로그인을 시도하는 회원이 관리자 일 경우
+               // session에 admin 여부를 Y로 준다.
                response.sendRedirect(request.getContextPath()+"/Common/main.do"); // 로그인화면으로 리다이렉트         
+          
             }else {
                response.setContentType("text/html; charset=UTF-8");
                PrintWriter out = response.getWriter();
@@ -201,7 +206,7 @@ public class CommonController extends HttpServlet{
                
                RequestDispatcher rd = request.getRequestDispatcher("/Common/searchid.do");
                rd.forward(request, response); 
-            
+              
             }else {
                response.setContentType("text/html; charset=UTF-8");
                PrintWriter out = response.getWriter();
