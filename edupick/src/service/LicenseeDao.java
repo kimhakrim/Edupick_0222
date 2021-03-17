@@ -231,5 +231,23 @@ public String findPwd(String lId, String lName, String lJumin) {
 	      
 	      
 	   } 
-
+	   public int licenseeDelete(int lidx, String lPwd, String lTel) {
+			
+      	 int value = 0;
+      	 
+      	 String sql = "update licensee set ldelyn='Y' where lidx =?";
+      	 	try {
+      			pstmt =	conn.prepareStatement(sql);
+      			pstmt.setInt(1, lidx);
+      			pstmt.setString(2, lPwd );
+      			pstmt.setString(3, lTel);
+      			pstmt.executeUpdate();
+      			
+      			} catch (SQLException e) {
+      				
+      				e.printStackTrace();
+      			}
+      			return value; 
+      	 
+       }
 }

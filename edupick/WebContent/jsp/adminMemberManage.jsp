@@ -6,21 +6,21 @@
 		<meta charset="UTF-8">
 		<title>회원관리</title>
 		<!-- title 아이콘 -->
-		<link rel="shortcut icon" type="image/x-icon" href="titlelogo.png">
-		<link href="adminmain.css" rel="stylesheet" type="text/css" />
-		<link href="adminmembermanage.css" rel="stylesheet" type="text/css" />
-		<link href="adminfaqmanage.css" rel="stylesheet" type="text/css" />
-		<script src="jquery-3.5.1.min.js"></script>
-		<script src="admin.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="<%= request.getContextPath() %>/webimage/titlelogo.png">
+		<link href="<%= request.getContextPath() %>/css/adminmain.css" rel="stylesheet" type="text/css" />
+		<link href="<%= request.getContextPath() %>/css/adminmembermanage.css" rel="stylesheet" type="text/css" />
+		<link href="<%= request.getContextPath() %>/css/adminfaqmanage.css" rel="stylesheet" type="text/css" />
+		<script src="<%= request.getContextPath() %>/js/jquery-3.5.1.min.js"></script>
+		<script src="<%= request.getContextPath() %>/js/admin.js"></script>
 	</head>
 	<body>
 		<header>
 			<div class="herdiv">
-				<div class="logodiv"><img src="edupick2.jpg"></div>
+				<div class="logodiv"><img src="<%= request.getContextPath() %>/webimage/edupick2.jpg"></div>
 				<div class="logdiv">○○○(님)</div>
 				<div class="logdiv2">
-				<a href="에듀픽.html">Home</a>
-				<a href="#">로그아웃</a>
+				<a href="<%= request.getContextPath() %>/Common/main.do">Home</a>
+				<a href="<%= request.getContextPath() %>/Common/logout.do">로그아웃</a>
 				</div>
 			</div>
 		</header>
@@ -59,7 +59,7 @@
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
-						<div class="selectsh3"><img src="search.jpg"></div>
+						<div class="selectsh3"><img src="<%= request.getContextPath() %>/webimage/search.jpg"></div>
 					</form>
 				</div>
 				<div class="usermainpage2">
@@ -78,7 +78,7 @@
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
-						<div class="selectsh3"><img src="search.jpg"></div>
+						<div class="selectsh3"><img src="<%= request.getContextPath() %>/webimage/search.jpg"></div>
 					</form>
 				</div>
 				<div class="usermainpage3">
@@ -92,7 +92,7 @@
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
-						<div class="selectsh3"><img src="search.jpg"></div>
+						<div class="selectsh3"><img src="<%= request.getContextPath() %>/webimage/search.jpg"></div>
 					</form>
 				</div>
 				<div class="userup">
@@ -637,11 +637,11 @@
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
-						<div class="selectsh3"><img src="search.jpg"></div>
+						<div class="selectsh3"><img src="<%= request.getContextPath() %>/webimage/search.jpg"></div>
 					</form>
 				</div>
 				<div class="ftaplus">
-					<button type="button" id="ftaplusbtn">FAQ 추가하기<img src="더하기.png"></button>
+					<button type="button" id="ftaplusbtn">FAQ 추가하기<img src="<%= request.getContextPath() %>/webimage/더하기.png"></button>
 				</div>
 				<form class="mainfrm4">
 					<ul id="ul1">
@@ -732,18 +732,18 @@
 					</div>
 					<div class="ftacontent">
 						<div class="faqhead">
-							<img src="FAQ.png">
+							<img src="<%= request.getContextPath() %>/webimage/FAQ.png">
 							<div class="faqcont">코카콜라에서 단맛이나요</div>
-							<div class="closeimg"><img src="닫기.png"></div>
+							<div class="closeimg"><img src="<%= request.getContextPath() %>/webimage/닫기.png"></div>
 						</div>
 						<div class="faqcontentmain">구라임 ㅎㅎ;</div>
 					</div>
 					<div class="cathead">카테고리</div>
 					<div class="ftacontent2">
 						<div class="faqhead">
-							<img src="FAQ.png">
+							<img src="<%= request.getContextPath() %>/webimage/FAQ.png">
 							<div class="faqcont"><input type="text"></div>
-							<div class="closeimg2"><img src="닫기.png"></div>
+							<div class="closeimg2"><img src="<%= request.getContextPath() %>/webimage/닫기.png"></div>
 						</div>
 						<div class="faqcontentmain"><input type="text"></div>
 						<div class="catgo"><button type="button">등록</button></div>

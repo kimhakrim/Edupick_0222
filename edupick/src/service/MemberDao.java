@@ -284,6 +284,25 @@ public class MemberDao {
 	            }   
 	            return value;
 	         }
-	}
+	         public int memberDelete(int midx, String mPwd, String mTel) {
+				
+	        	 int value = 0;
+	        	 
+	        	 String sql = "update edupickmember set mdelyn='Y' where midx =?";
+	        	 	try {
+	        			pstmt =	conn.prepareStatement(sql);
+	        			pstmt.setInt(1, midx);
+	        			pstmt.setString(2, mPwd );
+	        			pstmt.setString(3, mTel);
+	        			pstmt.executeUpdate();
+	        			
+	        			} catch (SQLException e) {
+	        				
+	        				e.printStackTrace();
+	        			}
+	        			return value; 
+	        	 
+	         }
+}
 	            
 

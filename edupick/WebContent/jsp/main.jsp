@@ -422,6 +422,10 @@
 					<p id="subject4">사회</p>
 					<p id="subject5">과학</p>
 					<p id="subject6">음악</p>
+					
+					
+					
+					
 					<p id="subject7">미술</p>
 					<p id="subject8">체육</p>
 					<p id="subject9">컨설팅</p>

@@ -303,13 +303,15 @@ public class CommonController extends HttpServlet{
          String userType = (String)session.getAttribute("userType");
          if(userType.equals("M")) {
             
-            String mId = (String)session.getAttribute("mId");
+            String midx =(String)session.getAttribute("midx");
+        	String mId = (String)session.getAttribute("mId");
             MemberDao md = new MemberDao();
             MemberVo mv = md.getInForm(mId);
             request.setAttribute("vo", mv);
             System.out.println("mv->>>"+mv);
          }else {
-            String lId = (String)session.getAttribute("lId");
+            String lidx = (String)session.getAttribute("lidx");
+        	String lId = (String)session.getAttribute("lId");
             LicenseeDao ld = new LicenseeDao();
             LicenseeVo lv = ld.getInForm(lId);
             request.setAttribute("vo", lv);
@@ -321,7 +323,6 @@ public class CommonController extends HttpServlet{
       
       }
       
-   
    
    }
    

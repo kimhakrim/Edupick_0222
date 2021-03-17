@@ -34,7 +34,7 @@ import javax.servlet.http.HttpServletResponse;
 			RequestDispatcher rd = request.getRequestDispatcher("/jsp/adminManage.jsp");
 			rd.forward(request, response);	
 			
-		
+			
 			
 		}else if(str.equals("/Admin/adminMemberDetail.do")) {
 			
