@@ -130,8 +130,9 @@ public class CommonController extends HttpServlet{
           System.out.println("value2-"+value2);
             
             if(value2 != 0) {               
-               String lName = ld.getName(lId, lPwd);
-               session.setAttribute("loginname", lName);
+               LicenseeVo lvo = ld.getName(lId, lPwd);
+               session.setAttribute("loginname", lvo.getLname());
+               session.setAttribute("lgrade", lvo.getLgrade());
                session.setAttribute("lId" , lId);
                session.setAttribute("userType", "L");
               

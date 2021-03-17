@@ -6,6 +6,7 @@
 <% 
 String mId = (String)session.getAttribute("mid");    
 String lId = (String)session.getAttribute("lid");
+String lGrade = (String)session.getAttribute("lgrade");
 String userType = (String)session.getAttribute("userType");
 %>
 <%
@@ -234,7 +235,7 @@ if(userType.equals("M")){
             </fieldset>
             </c:if>
             
-            <c:if test="${userType eq 'L' || userType eq 'A'}">
+            <c:if test="${userType eq 'L' && lGrade eq 'A'}">
             <fieldset name="joinfed">
                <form name="regFrm02" value="licensee">
                   <input type = "hidden" name="lidx" value="<%=lv.getLidx()%>">
@@ -386,12 +387,162 @@ if(userType.equals("M")){
                </form>   
             </fieldset>
             </c:if>
-            <script>
-            //      function inputCheck02(){
-            //         alert("test");
-                  
-                  
-                  </script>
+           
+           <!----------------->
+           <c:if test="${userType eq 'L' && lGrade eq 'L'}">
+            <fieldset name="joinfed">
+               <form name="regFrm02" value="licensee">
+                  <input type = "hidden" name="lidx" value="<%=lv.getLidx()%>">
+                  <table>
+                     <tr>
+                                <td width="19%;">아이디</td>
+                                <td><input id="modiid" name="modiid" size="15" disabled style="background:white; border:1px solid black;" value="<%= lv.getLid()%>"> 
+                                <!-- onClick로 입력한 아이디가 중복된 값인지 확인 -->
+                            </tr>
+                     <tr>
+                        <td>
+                          	비밀번호
+                        </td>
+                        <td>
+                           <input  type="password" name="modipwd" id="modipwd">
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           	비밀번호 확인
+                        </td>
+                        <td>
+                           <input  type="password" name="modipwdcheck" id="modipwdcheck"><span id="same"></span>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>
+                          	이름
+                        </td>
+                        <td>
+                           <input name="name" name="name" size="15" disabled style="background:white; border:1px solid black;" value="<%= lv.getLname()%>">
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           	주민등록번호
+                        </td>
+                        <td>
+                           <input name="birthday"  size="8" maxlength="6" disabled style="background:white; border:1px solid black;" value = "<%= lJuminArray[0]%>"> - 
+                           <input type="password" name="birthday2" size="8"  maxlength="7" disabled style="background:white value="<%= lJuminArray[1] %>">
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                          	 이메일
+                        </td>
+                        <td>
+                           <input name="modiemail" id="modiemail" size="20" value="<%= lEmailArray[0]%>"> @   
+                           <select name="modiemail2">
+                              <%
+                                 if(lEmailArray[1].equals("naver.com")){
+                                    %>
+                                    <option selected>naver.com</option>
+                                    <%
+                                 }else if(lEmailArray[1].equals("nate.com")){
+                                    %>
+                                    <option selected>nate.com</option>
+                                    <%
+                                 }else if(lEmailArray[1].equals("daum.com")){
+                                    %>
+                                    <option selected>daum.net</option>
+                                    <% 
+                                 }else if(lEmailArray[1].equals("google.com")){
+                                    %>
+                                    <option selected>google.com</option>
+                                    <% 
+                                 }      
+                              %>
+                              <option >naver.com</option>
+                              <option >nate.com</option>
+                              <option >daum.com</option>
+                              <option >google.com</option>
+                              
+                           </select>
+                           
+                           
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span>*</span>우편번호
+                        </td>
+                                <td>
+                           <input type="text" id="sample4_postcode" name="sample4_postcode"  readonly placeholder="우편번호" value="<%=lv.getLpostcode()%>">
+                                  <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
+                                  <input type="text" id="sample4_roadAddress" name="sample4_roadAddress" readonly placeholder="도로명주소" value="<%=lv.getLroadaddr()%>">
+                                   <input type="text" id="sample4_jibunAddress" name="sample4_jibunAddress" readonly placeholder="지번주소" value="<%=lv.getLjibunaddr()%>"><br>
+                                   <span id="guide" name="guide" style="color:#999;display:none"></span>
+                                   <input type="text" id="sample4_detailAddress" name="sample4_detailAddress" placeholder="상세주소" value="<%=lv.getLdetailaddr()%>">
+                                    <input type="text" id="sample4_extraAddress" name="sample4_extraAddress" readonly placeholder="참고항목" value="<%=lv.getLextraaddr()%>">
+                                </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           	휴대폰 번호
+                        </td>                     
+                        <td>
+                           <select name="phone1" id="phone1">
+                              <%
+                                 if(lTelArray[0].equals("010")){
+                                    %>
+                                    <option selected>010</option>
+                                    <%
+                                 }else if(lTelArray[0].equals("011")){
+                                    %>
+                                    <option selected>011</option>
+                                    <%
+                                 }else{
+                                    %>
+                                    <option selected>018</option>
+                                    <% 
+                                 }   
+                              %>
+                                    
+                              
+                              
+                              <option>010</option>
+                              <option>011</option>
+                              <option>018</option>
+                           </select> -
+                           <input name="phone2" id="phone2" size="5" maxlength="4" value="<%= lTelArray[1]%>"> - <input name="phone3" id="phone3" size="5" maxlength="4" value="<%= lTelArray[2]%>">
+                        </td>   
+                     </tr>
+                     <tr>   
+                        <td>
+                         	업체명
+                        </td>
+                        <td>
+                           <input name="modicomname" id="modicomname" size="10"  maxlength= "9" value="<%=lv.getLcomname() %>" >
+                        </td>
+                     
+                     </tr>
+                     <tr>
+                        <td>
+                         	사업자번호
+                        </td>
+                        <td>
+                           <input name="lnumber1" size="4" maxlength="3" value ="<%=lNumberArray[0] %>"> - <input name="lnumber2" size="4" maxlength="2" value ="<%=lNumberArray[1] %>"> - <input name="lnumber3" size="4" maxlength="4" value ="<%=lNumberArray[2] %>">
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                                <td id="jointd">
+                                <input type="button" value="변경하기" onclick="inputCheck02()">
+                        </td>
+                            </tr>
+                  </table>   
+               </form>   
+            </fieldset>
+            </c:if>
+           
+        
             <form name="regFrm2">
                <fieldset name="dropuser">
                   <table class="dropusertb">

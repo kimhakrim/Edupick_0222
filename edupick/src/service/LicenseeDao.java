@@ -103,48 +103,48 @@ public class LicenseeDao {
 //	return name;
 
 }
-public String getName(String lName, String lPwd) {
+public LicenseeVo getName(String lName, String lPwd) {
 	LicenseeVo lv = new LicenseeVo();
 	String name = null;
+	String lgrade = null;
 	try {
-	String sql = "select lname,lgrade from licensee where lid=? and lpwd=?";
-	pstmt = conn.prepareStatement(sql);
-	pstmt.setString(1, lName);
-	pstmt.setString(2, lPwd);
-	ResultSet rs = pstmt.executeQuery();
-	
-	if(rs.next()) {
-	name = rs.getString("lname");
-	lv.setLgrade("lgrade");
-	}
+		String sql = "select lname,lgrade from licensee where lid=? and lpwd=?";
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, lName);
+		pstmt.setString(2, lPwd);
+		ResultSet rs = pstmt.executeQuery();
+		
+		if(rs.next()) {
+			name = rs.getString("lname");
+			lgrade = rs.getString("lgrade");
+			lv.setLname(name);
+			lv.setLgrade(lgrade);
+		}
 	}catch(Exception e) {
 		System.out.println("해당하는 사람이 존재하지 않습니다.");
 	}
-	return name;	
+	return lv;	
 
-
-
-
-
-}public String findId(String lName, String lTel) {
+}
+public String findId(String lName, String lTel) {
+	String id = null;
+	try {
+		String sql = "select lid from licensee where lname=? and ltel=?";
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, lName);
+		pstmt.setString(2, lTel);
+		ResultSet rs = pstmt.executeQuery();
 	
-		String id = null;
-		try {
-			String sql = "select lid from licensee where lname=? and ltel=?";
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, lName);
-			pstmt.setString(2, lTel);
-			ResultSet rs = pstmt.executeQuery();
-		
-			if(rs.next()) {
-			id = rs.getString("lid");
-			}
-			}catch(Exception e) {
-				System.out.println("해당하는 사람이 존재하지 않습니다.");
-			}
-		return id;
+		if(rs.next()) {
+		id = rs.getString("lid");
+		}
+		}catch(Exception e) {
+			System.out.println("해당하는 사람이 존재하지 않습니다.");
+		}
+	return id;
 
-	}public String findPwd(String lId, String lName, String lJumin) {
+}
+public String findPwd(String lId, String lName, String lJumin) {
 	
 		String pwd = null;
 		try {

@@ -6,9 +6,11 @@
 <%  
    String mName = (String)request.getAttribute("loginname");
    String lName = (String)request.getAttribute("loginname");
+   
 %>
 <%  
 	String loginname = (String)session.getAttribute("loginname");
+	String lGrade = (String)session.getAttribute("lgrade");
 %>
 <html>
 	<head>
@@ -32,6 +34,7 @@
 		<link href="<%= request.getContextPath() %>/css/edupickla.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body style="overflow-x:hidden; overflow-y:scroll;"> 
+
 		<header>
 			<div class="headerimg">
 				<a href="#">
@@ -488,7 +491,7 @@
 				</div>
 				</c:if>
 				
-				<c:if test="${not empty sessionScope.loginname && userType == 'M'}">
+				<c:if test="${not empty sessionScope.loginname && sessionScope.userType.equals('M')}">
 				<div class="imgbanner">
 					<img src="<%= request.getContextPath() %>/webimage/event11.jpg" id="img5">
 					<img src="<%= request.getContextPath() %>/webimage/event22.jpg" id="img5_2">
@@ -535,7 +538,7 @@
 				</div>
 				</c:if>
 				
-				<c:if test="${not empty sessionScope.loginname && userType == 'L'}">
+				<c:if test="${not empty sessionScope.loginname && sessionScope.userType.equals('L')  && sessionScope.lgrade.equals('L')}">
 				<div class="imgbanner">
 					<img src="<%= request.getContextPath() %>/webimage/event11.jpg" id="img5">
 					<img src="<%= request.getContextPath() %>/webimage/event22.jpg" id="img5_2">
@@ -572,7 +575,7 @@
 				</c:if>
 				
 				
-				<c:if test="${not empty sessionScope.loginname && userType == 'A'}">
+				<c:if test="${not empty sessionScope.loginname && sessionScope.userType.equals('L')  && sessionScope.lgrade.equals('A')}">
 				<div class="imgbanner">
 					<img src="<%= request.getContextPath() %>/webimage/event11.jpg" id="img5">
 					<img src="<%= request.getContextPath() %>/webimage/event22.jpg" id="img5_2">
