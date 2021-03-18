@@ -1,142 +1,151 @@
 ﻿$(document).ready(function(){
 	$(".admin").click(function(){
-		$(location).attr('href','adminManage.do');
+		$(location).attr('href','/edupick/Admin/adminManage.do');
 	});
 	
 	$(".logodiv").click(function(){
-		$(location).attr('href','admin.do');
+		$(location).attr('href','/edupick/Admin/admin.do');
 	});
 	$("#subnav1").click(function(){
-		$(location).attr('href','adminMemberManage.do');
+		$(location).attr('href','/edupick/Admin/adminMemberManage.do');
 	});
 	$("#subnav2").click(function(){
-		$(location).attr('href','adminProductManage.do');
+		$(location).attr('href','/edupick/Admin2/adminProductManage.do');
 	});
 	$("#subnav3").click(function(){
-		$(location).attr('href','adminOrderManage.do');
+		$(location).attr('href','/edupick/Admin2/adminOrderManage.do');
 	});
 	$("#subnav4").click(function(){
-		$(location).attr('href','adminBoardManage.do');
+		$(location).attr('href','/edupick/Admin2/adminBoardManage.do');
 	});
 	$("#subnav5").click(function(){
-		$(location).attr('href','adminPageManage.do');
+		$(location).attr('href','/edupick/Admin2/adminPageManage.do');
 	});
 	$("#subnav6").click(function(){
-		$(location).attr('href','adminOther.do');
+		$(location).attr('href','/edupick/Admin2/adminOther.do');
 	});
 	$("#btbt").click(function(){
-		$(location).attr('href','adminMemberDetail.do');
+		$(location).attr('href','/edupick/Admin/adminMemberDetail.do');
 	});
 	$("#btbtn").click(function(){
-		$(location).attr('href','adminAnswer.do');
+		$(location).attr('href','/edupick/Admin/adminAnswer.do');
 	});
 	$("#btbtcl").click(function(){
-		$(location).attr('href','adminInstituteDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminInstituteDetail.do');
 	});
 	$("#sec").click(function(){
-		$(location).attr('href','adminMemberManage.do');
+		$(location).attr('href','/edupick/Admin/adminMemberManage.do');
 	});
 	$("#fro").click(function(){
-		$(location).attr('href','adminMemberManage.do');
+		$(location).attr('href','/edupick/Admin/adminMemberManage.do');
 	});
 	$("#fro1").click(function(){
-		$(location).attr('href','adminMemberManage.do');
+		$(location).attr('href','/edupick/Admin/adminMemberManage.do');
 	});	
 	$("#cllist").click(function(){
-		$(location).attr('href','adminProductManage.do');
+		$(location).attr('href','/edupick/Admin2/adminProductManage.do');
 	});
 	$("#clplus_1").click(function(){
-		$(location).attr('href','adminInstituteAdd.do');
+		$(location).attr('href','/edupick/Admin2/adminInstituteAdd.do');
 	});
 	$("#clplus_2").click(function(){
-		$(location).attr('href','adminBoardAdd.do');
+		$(location).attr('href','/edupick/Admin2/adminBoardAdd.do');
 	});
 	$(".subbtn>button").click(function(){
-		$(location).attr('href','adminInstituteDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminInstituteDetail.do');
 	});
 	$("#clmodi").click(function(){
-		$(location).attr('href','adminInstituteModify.do');
+		$(location).attr('href','/edupick/Admin2/adminInstituteModify.do');
 	});
 	$("#btbt99").click(function(){
-		$(location).attr('href','adminCouresDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminCouresDetail.do');
 	});
 	$("#modibtt").click(function(){
-		$(location).attr('href','adminCouresModify.do');
+		$(location).attr('href','/edupick/Admin2/adminCouresModify.do');
 	});
 	$("#listbt").click(function(){
-		$(location).attr('href','adminProductManage.do');
+		$(location).attr('href','/edupick/Admin2/adminProductManage.do');
 	});
 	$("#savebt").click(function(){
-		$(location).attr('href','adminCouresDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminCouresDetail.do');
 	});
 	$("#btbt88").click(function(){
-		$(location).attr('href','adminStudentDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminStudentDetail.do');
 	});
 	$("#listbtn1").click(function(){
-		$(location).attr('href','adminProductManage.do');
+		$(location).attr('href','/edupick/Admin2/adminProductManage.do');
 	});
 	$("#modibtn1").click(function(){
-		$(location).attr('href','adminStudentModify.do');
+		$(location).attr('href','/edupick/Admin2/adminStudentModify.do');
 	});
 	$("#modibtn2").click(function(){
-		$(location).attr('href','adminStudentDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminStudentDetail.do');
 	});
 	$("#btbt77").click(function(){
-		$(location).attr('href','adminReviewDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminReviewDetail.do');
 	});
 	$("#starbtn").click(function(){
-		$(location).attr('href','adminProductManage.do');
+		$(location).attr('href','/edupick/Admin2/adminProductManage.do');
 	});
 	$("#btbt66").click(function(){
-		$(location).attr('href','adminCommunityDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminCommunityDetail.do');
 	});
 	$("#listbtn3").click(function(){
-		$(location).attr('href','adminProductDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminProductManage.do');
 	});
 	$("#btbt55").click(function(){
-		$(location).attr('href','adminAdviceDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminAdviceDetail.do');
 	});
 	$("#cmlist").click(function(){
-		$(location).attr('href','adminProductManage.do');
+		$(location).attr('href','/edupick/Admin2/adminProductManage.do');
 	});
 	$("#btbt44").click(function(){
-		$(location).attr('href','adminPayDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminPayDetail.do');
 	});
 	$("#cdlist").click(function(){
-		$(location).attr('href','adminOrderManage.do');
+		$(location).attr('href','/edupick/Admin2/adminOrderManage.do');
 	});
 	$("#btbt33").click(function(){
-		$(location).attr('href','adminVisitDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminVisitDetail.do');
 	});
 	$("#visitlist").click(function(){
-		$(location).attr('href','adminOrderManage.do');
+		$(location).attr('href','/edupick/Admin2/adminOrderManage.do');
 	});
 	$("#postbtn").click(function(){
-		$(location).attr('href','adminBoardManage.do');
+		$(location).attr('href','/edupick/Admin2/adminBoardManage.do');
 	});
 	$("#postlist").click(function(){
-		$(location).attr('href','adminBoardManage.do');
+		$(location).attr('href','/edupick/Admin2/adminBoardManage.do');
 	});
 	$("#btbtmf").click(function(){
-		$(location).attr('href','adminBoardModify.do');
+		$(location).attr('href','/edupick/Admin2/adminBoardModify.do');
 	});
 	$("#btbt22").click(function(){
-		$(location).attr('href','adminBoardDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminBoardDetail.do');
 	});
 	$("#btbt11").click(function(){
-		$(location).attr('href','adminReviewDetail.do');
+		$(location).attr('href','/edupick/Admin2/adminReviewDetail.do');
 	});
 	$("#commentlist").click(function(){
-		$(location).attr('href','adminBoardManage.do');
+		$(location).attr('href','/edupick/Admin2/adminBoardManage.do');
+	});
+	$("#btbt00").click(function(){
+		alert("현재 미결제 상태입니다.");
+	});
+	$("#clplus_4").click(function(){
+		$(location).attr('href','/edupick/Admin/adminQuizAdd.do');
+	});
+	$("#quizsave").click(function(){
+		$(location).attr('href','/edupick/Admin2/adminOther.do');
 	});
 	// -------------------------------------
-	$("#modibt0").click(function(){
+	$("#modibt0_2").click(function(){
 		if($(".myservice").css("display","none")) {		
 			$(".myservice").css("display","block");
 			$(".myservice2").css("display","none");
 		}
 	});
-	$("#modibt").click(function(){
+	$("#modibt0_1").click(function(){
 		if($("myservice2").css("display","none")){
 			$(".myservice2").css("display","block");
 			$(".myservice").css("display","none");
@@ -162,8 +171,8 @@
 	});
 
 	$("#ftaplusbtn").click(function(){
-		$(".ftacontent2").css("display","block");
-		$(".cathead").css("display","block");
+		$(".ftacontent2").toggle();
+		$(".cathead").toggle();
 	});
 	
 	$(".closeimg2>img").click(function(){
@@ -174,6 +183,37 @@
 	$(".catgo>button").click(function(){
 		alert("미구현입니다");
 	});
+	
+	$("#quizs").click(function(){
+		$(".quiz").css("display","block");
+	});
+	
+	$(".quiz_close").click(function(){
+		$(".quiz").css("display","none");
+	});
+	
+	
+//	-------------------------------------------------------------------------
+	//포인트 퀴즈
+	
+	$("#joke1").click(function(){
+		alert("틀렸습니다. 다시 풀어주세요");
+	});
+	$("#joke2").click(function(){
+		alert("틀렸습니다. 다시 풀어주세요");
+	});
+	$("#joke3").click(function(){
+		alert("그게 바로너야~~");
+		$("#joke3").text("돼지는 당신입니다. 그만 먹어주세요.");
+		$("#joke3").css("background","red");
+		$("#joke3").css("font-size","25px");
+		$("#joke3").css("font-weight","700");
+	});
+	$("#joke4").click(function(){
+		alert("틀렸습니다. 다시 풀어주세요");
+	});
+	
+	//--------------------------------------------------------------------------------
 	
 	$("#navuser_1_1").click(function(){
 		$(".mainfrm").css("display","block");
@@ -379,9 +419,9 @@
 			$("#usercheck_all15").prop("checked",false);
 		}
 	});
+});	
+
 	
 	// -------------------------------------------------
 	
 	
-	
-});

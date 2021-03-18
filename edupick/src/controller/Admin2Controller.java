@@ -115,11 +115,35 @@ import javax.servlet.http.HttpServletResponse;
 			rd.forward(request, response);	
 		
 		
-		}else if(str.equals("/Admin2/admin.do")) {
+		}else if(str.equals("/Admin2/adminAdviceDetail.do")) {
 			
-			RequestDispatcher rd = request.getRequestDispatcher("/jsp/admin.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/jsp/adminAdviceDetail.jsp");
 			rd.forward(request, response);	
 		
+		}else if(str.equals("/Admin2/adminBoardManage.do")) {
+			
+			RequestDispatcher rd = request.getRequestDispatcher("/jsp/adminBoardManage.jsp");
+			rd.forward(request, response);	
+		
+		}else if(str.equals("/Admin2/adminBoardModify.do")) {
+			
+			RequestDispatcher rd = request.getRequestDispatcher("/jsp/adminBoardModify.jsp");
+			rd.forward(request, response);	
+		
+		}else if(str.equals("/Admin2/adminBoardDetail.do")) {
+			
+			RequestDispatcher rd = request.getRequestDispatcher("/jsp/adminBoardDetail.jsp");
+			rd.forward(request, response);	
+		
+		}else if(str.equals("/Admin2/adminBoardAdd.do")) {
+			
+			RequestDispatcher rd = request.getRequestDispatcher("/jsp/adminBoardAdd.jsp");
+			rd.forward(request, response);	
+		
+		}else if(str.equals("/Admin2/adminOther.do")) {
+			
+			RequestDispatcher rd = request.getRequestDispatcher("/jsp/adminOther.jsp");
+			rd.forward(request, response);	
 		
 		}
 			
