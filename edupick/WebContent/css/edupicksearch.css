@@ -1,4 +1,4 @@
-﻿body{
+body{
 	-ms-user-select: none; 
 	-moz-user-select: -moz-none;
 	-khtml-user-select: none;
@@ -207,34 +207,28 @@
 	height:50px;
 	padding-top:10px;
 	text-align:center;
-	background-image:url("연령.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
+}
+#imgshmain {
+	width:40px;
+	height:50px;
+	float:left;
+	margin-top:-13px;
+}
+#imgshmain2 {
+	width:50px;
+	height:50px;
+	float:left;
+	margin-top:-11px;
+}
+#imgshmain3 {
+	width:50px;
+	height:50px;
+	float:left;
+	margin-top:-20px;
 }
 .agemain > p:hover{
 	background:orange;
 	color: gray;
-}
-#age1{
-	background-image:url("초딩.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-	
-}
-#age2{
-	background-image:url("중딩.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#age3{
-	background-image:url("고딩.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#age4{
-	background-image:url("어른이.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
 }
 .subjectmain{
 	width:250px;
@@ -263,76 +257,8 @@
 	height:50px;
 	padding-top:10px;
 	text-align:center;
-	background-image:url("과목.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
 }
 .subjectmain > p:hover{
 	background:orange;
 	color: gray;
-}
-#subject1{
-	background-image:url("국어.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#subject2{
-	background-image:url("수학.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#subject3{
-	background-image:url("영어.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#subject4{
-	background-image:url("사회.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#subject5{
-	background-image:url("과학.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#subject6{
-	background-image:url("음악.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#subject7{
-	background-image:url("미술.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#subject8{
-	background-image:url("체육.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#subject9{
-	background-image:url("컨설팅.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#subject10{
-	background-image:url("논술.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#subject11{
-	background-image:url("재수.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#subject12{
-	background-image:url("종합.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
-}
-#subject13{
-	background-image:url("제2외국어.png");
-	background-repeat:no-repeat;
-	background-size: 40px;
 }

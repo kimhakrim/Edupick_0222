@@ -1,4 +1,4 @@
-﻿.maincontent{
+.maincontent{
 	position:absolute;
 	width:700px;
 	height:600px;
@@ -52,7 +52,7 @@
 }
 #grade{
 	position:absolute;
-	top:227px;
+	top:185px;
 	left:150px;
 	padding-top:4px;
 	padding-left:20px;

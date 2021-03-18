@@ -1,4 +1,4 @@
-ï»¿#noticeh1 {
+#noticeh1 {
 	padding: 50px 0;
 	font-weight: 400;
 	text-align: center;}
@@ -17,7 +17,7 @@
 	}
 
 section {
-	font-family:"ë§‘ì€ ê³ ë”•";
+	font-family:"¸¼Àº °íµñ";
 	display: none;
 	padding: 20px 0 0;
 	border-top: 1px solid #ddd;}
@@ -30,7 +30,7 @@ a {
 #divPaging > div > a {
 	color:black;
 }				
-/*ë¼ë””ì˜¤ë²„íŠ¼ ìˆ¨ê¹€*/
+/*¶óµð¿À¹öÆ° ¼û±è*/
   
 .maindmenu>input {
 	  display: none;}  
@@ -52,7 +52,7 @@ label:hover {
 	height:800px;
 }
 
-/*input í´ë¦­ì‹œ, label ìŠ¤íƒ€ì¼*/
+/*input Å¬¸¯½Ã, label ½ºÅ¸ÀÏ*/
 input:checked + label {
 	  color: #555;
 	  border: 1px solid #ddd;
@@ -68,7 +68,7 @@ input:checked + label {
 	
 #trTable{
 	line-height:2em;		
-	font-family:"ë§‘ì€ ê³ ë”•";
+	font-family:"¸¼Àº °íµñ";
 	margin:0 auto; 
 	text-align:center;
 	font-size:13pt;
@@ -82,11 +82,11 @@ td{
 	text-align:center;
 	padding:30;
 	margin:0;
-	font-family:"ë§‘ì€ ê³ ë”•";	
+	font-family:"¸¼Àº °íµñ";	
 }
 
 #mainWrapper{	
-	margin: 0 auto; /*ê°€ìš´ë° ì •ë ¬*/
+	margin: 0 auto; /*°¡¿îµ¥ Á¤·Ä*/
 	min-width: 320px;
 	max-width: 800px;	
 	padding: 50px 25px;
@@ -149,14 +149,17 @@ td {
 }
 
 #searchbtn{
-	background-image:url("search.jpg");
-	background-repeat:no-repeat;
-	background-size: 30px;
-	width:36px;
-	height:36px;
+	width:auto;
+	height:auto;
 	border:3px solid white;
+	background:white;
 	position:relative;
 	top:10px;
+}
+
+#searchbtn > img {
+	width:30px;
+	height:30px;
 }
 
 #topmenumain {

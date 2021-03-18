@@ -1,11 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "service.*"%>
+<%@ page import = "java.util.*" %>
+<%@ page import = "controller.*"%>
+<%@ page import = "Domain.*" %>
+<%
+ArrayList<MemberVo> alist = (ArrayList<MemberVo>)request.getAttribute("alist");
+PageMaker pm = (PageMaker)request.getAttribute("pm");
+%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>È¸¿ø°ü¸®</title>
-		<!-- title ¾ÆÀÌÄÜ -->
+		<title>íšŒì›ê´€ë¦¬</title>
+		<!-- title ì•„ì´ì½˜ -->
 		<link rel="shortcut icon" type="image/x-icon" href="<%= request.getContextPath() %>/webimage/titlelogo.png">
 		<link href="<%= request.getContextPath() %>/css/adminmain.css" rel="stylesheet" type="text/css" />
 		<link href="<%= request.getContextPath() %>/css/adminmembermanage.css" rel="stylesheet" type="text/css" />
@@ -17,33 +25,33 @@
 		<header>
 			<div class="herdiv">
 				<div class="logodiv"><img src="<%= request.getContextPath() %>/webimage/edupick2.jpg"></div>
-				<div class="logdiv">¡Û¡Û¡Û(´Ô)</div>
+				<div class="logdiv">(ë‹˜)</div>
 				<div class="logdiv2">
 				<a href="<%= request.getContextPath() %>/Common/main.do">Home</a>
-				<a href="<%= request.getContextPath() %>/Common/logout.do">·Î±×¾Æ¿ô</a>
+				<a href="<%= request.getContextPath() %>/Common/logout.do">ë¡œê·¸ì•„ì›ƒ</a>
 				</div>
 			</div>
 		</header>
 		<nav class="nav">
-			<div class="admin" >°ü¸®ÀÚ °èÁ¤°ü¸®</div>
+			<div class="admin" >ê´€ë¦¬ìž ê³„ì •ê´€ë¦¬</div>
 			<div>
-				<div class="navuser">È¸¿ø°ü¸® ¡å</div>
+				<div class="navuser">íšŒì›ê´€ë¦¬ â–¼</div>
 				<div class="navuser_1">
-					<a href="#" id="navuser_1_1">È¸¿ø¸ñ·Ï</a><br>
-					<a href="#" id="navuser_1_2">Å»ÅðÈ¸¿ø</a><br>
-					<a href="#" id="navuser_1_3">Áú¹®°ü¸®</a><br>
-					<a href="#" id="navuser_1_4">FAQ°ü¸®</a>
+					<a href="#" id="navuser_1_1">íšŒì›ëª©ë¡</a><br>
+					<a href="#" id="navuser_1_2">íƒˆí‡´íšŒì›</a><br>
+					<a href="#" id="navuser_1_3">ì§ˆë¬¸ê´€ë¦¬</a><br>
+					<a href="#" id="navuser_1_4">FAQê´€ë¦¬</a>
 				</div>
 			</div>
 		</nav>
 		<nav>
 			<div class="adminmenu">
-				<div class="subnav" id="subnav1" style="background:#FA5858;">È¸¿ø°ü¸®</div>
-				<div class="subnav" id="subnav2">»óÇ°°ü¸®</div>
-				<div class="subnav" id="subnav3">ÁÖ¹®°ü¸®</div>
-				<div class="subnav" id="subnav4">°Ô½ÃÆÇ°ü¸®</div>
-				<div class="subnav" id="subnav5">ÆäÀÌÁö°ü¸®</div>
-				<div class="subnav" id="subnav6">±âÅ¸°ü¸®</div>
+				<div class="subnav" id="subnav1" style="background:#FA5858;">íšŒì›ê´€ë¦¬</div>
+				<div class="subnav" id="subnav2">ìƒí’ˆê´€ë¦¬</div>
+				<div class="subnav" id="subnav3">ì£¼ë¬¸ê´€ë¦¬</div>
+				<div class="subnav" id="subnav4">ê²Œì‹œíŒê´€ë¦¬</div>
+				<div class="subnav" id="subnav5">íŽ˜ì´ì§€ê´€ë¦¬</div>
+				<div class="subnav" id="subnav6">ê¸°íƒ€ê´€ë¦¬</div>
 			</div>
 		</nav>
 		<section>
@@ -52,10 +60,10 @@
 					<form class="shfrm">
 						<div class="selectsh">
 							<select>
-								<option selected>È¸¿ø¸í</option>
-								<option>È¸¿ø¾ÆÀÌµð</option>
-								<option>È¸¿ø¿¬¶ôÃ³</option>
-								<option>È¸¿øÀÌ¸ÞÀÏ</option>
+								<option selected>íšŒì›ëª…</option>
+								<option>íšŒì›ì•„ì´ë””</option>
+								<option>íšŒì›ì—°ë½ì²˜</option>
+								<option>íšŒì›ì´ë©”ì¼</option>
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
@@ -66,15 +74,15 @@
 					<form class="shfrm">
 						<div class="selectsh0">
 							<select>
-								<option>È¸¿ø±¸ºÐ</option>
+								<option>íšŒì›êµ¬ë¶„</option>
 							</select>
 						</div>
 						<div class="selectsh">
 							<select>
-								<option selected>È¸¿ø¸í</option>
-								<option>È¸¿ø¾ÆÀÌµð</option>
-								<option>È¸¿ø¿¬¶ôÃ³</option>
-								<option>È¸¿øÀÌ¸ÞÀÏ</option>
+								<option selected>íšŒì›ëª…</option>
+								<option>íšŒì›ì•„ì´ë””</option>
+								<option>íšŒì›ì—°ë½ì²˜</option>
+								<option>íšŒì›ì´ë©”ì¼</option>
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
@@ -85,10 +93,10 @@
 					<form class="shfrm">
 						<div class="selectsh">
 							<select>
-								<option selected>È¸¿ø¸í</option>
-								<option>È¸¿ø¾ÆÀÌµð</option>
-								<option>È¸¿ø¿¬¶ôÃ³</option>
-								<option>È¸¿øÀÌ¸ÞÀÏ</option>
+								<option selected>íšŒì›ëª…</option>
+								<option>íšŒì›ì•„ì´ë””</option>
+								<option>íšŒì›ì—°ë½ì²˜</option>
+								<option>íšŒì›ì´ë©”ì¼</option>
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
@@ -96,223 +104,67 @@
 					</form>
 				</div>
 				<div class="userup">
-					<div><button type="button">»èÁ¦</button></div>
-					<div>ÃÑ È¸¿ø¼ö :</div>
-					<div>°Ë»ö È¸¿ø¼ö :</div>
+					<div><button type="button">ì‚­ì œ</button></div>
+					<div>ì´ íšŒì›ìˆ˜ :</div>
+					<div>ê²€ìƒ‰ íšŒì›ìˆ˜ :</div>
 				</div>
 				<div class="userup2">
-					<div><button type="button">»èÁ¦</button></div>
-					<div>ÃÑ Å»Åð È¸¿ø¼ö :</div>
-					<div>ÃÑ Å»Åð È¸¿ø¼ö :</div>
+					<div><button type="button">ì‚­ì œ</button></div>
+					<div>ì´ íƒˆí‡´ íšŒì›ìˆ˜ :</div>
+					<div>ì´ íƒˆí‡´ íšŒì›ìˆ˜ :</div>
 				</div>
 				<div class="userup3">
-					<div><button type="button">»èÁ¦</button></div>
-					<div>ÃÑ Áú¹®¼ö :</div>
-					<div>°Ë»ö Áú¹®¼ö :</div>
+					<div><button type="button">ì‚­ì œ</button></div>
+					<div>ì´ ì§ˆë¬¸ìˆ˜ :</div>
+					<div>ê²€ìƒ‰ ì§ˆë¬¸ìˆ˜ :</div>
 				</div>
 				<form class="mainfrm">
 					<table class="maintable">
 						<tr id="table1">
 							<th><input type="checkbox" id="usercheck"></th>
 							<th>No</th>
-							<th>È¸¿ø±¸ºÐ</th>
-							<th>¾ÆÀÌµð</th>
-							<th>È¸¿ø¸í</th>
-							<th>¿¬¶ôÃ³</th>
-							<th>ÀÌ¸ÞÀÏ</th>
-							<th>Æ÷ÀÎÆ®</th>
-							<th>°¡ÀÔÀÏ</th>
-							<th>±â´É</th>
+							<th>íšŒì›êµ¬ë¶„</th>
+							<th>ì•„ì´ë””</th>
+							<th>íšŒì›ëª…</th>
+							<th>ì—°ë½ì²˜</th>
+							<th>ì´ë©”ì¼</th>
+							
+							<th>ê°€ìž…ì¼</th>
+							<th>ê¸°ëŠ¥</th>
 						</tr>
+						<% for(MemberVo mv : alist){ %>
 						<tr>
 							<th><input type="checkbox" id="usercheck_all1"></th>
-							<td>1</td>
-							<td>ÀÏ¹ÝÈ¸¿ø</td>
-							<td>real</td>
-							<td>ÇÜ¹ö°Å</td>
-							<td>010-8282-9999</td>
-							<td>imhungry@hambug.com</td>
-							<td>27630point</td>
-							<td>2021-01-13</td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
+							<td><%= pm.getTotalCount() -((alist.indexOf(mv)+1)+(pm.getScri().getPage()-1)*pm.getScri().getPerPageNum())+1  %></td>
+							<td><%= mv.getMgrade() %></td>
+							<td><%= mv.getMid() %></td>
+							<td><a href="<%=request.getContextPath() %>/board/boardContent.do?midx=<%=mv.getMidx()%>"><%=mv.getMname() %></a></td>
+							<td><%=mv.getMtel() %></td>
+							<td><%=mv.getMemail() %></td>
+							<td><%=mv.getMjoindate() %></td>
+							<td><button type="button" id="btbt">ë³´ê¸°</button></td>
 						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all2"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all3"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all4"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all5"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all6"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all7"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all8"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all9"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all10"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all11"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all12"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all13"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all14"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all15"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt">º¸±â</button></td>
-						</tr>
+					<% } %>
 					</table>
 					<div id="divPaging">
-						<div>¢¸</div>
-						<div><a href="#"><b>1</b></a></div>
-						<div><a href="#">2</a></div>
-						<div><a href="#">3</a></div>
-						<div><a href="#">4</a></div>
-						<div><a href="#">5</a></div>
-						<div>¢º</div>
+					
+					
+					
+					
+						<div><%if (pm.isPrev() == true) {%>
+						<a href="<%=request.getContextPath()%>/Admin/adminMemberManage.do?page=<%=pm.getStartPage()-1%>&keyword=<%=pm.encoding(pm.getScri().getKeyword())%>">â—€</a>
+						<%} %>
+						</div>
+						<div>
+							<% for (int i =pm.getStartPage(); i<pm.getEndPage(); i++){%>	
+							<a href="<%=request.getContextPath()%>/Admin/adminMemberManage.do?page=<%=i%>&keyword=<%=pm.encoding(pm.getScri().getKeyword())%>"><%=i%></a>
+							<% } %>
+						</div>
+						<div>
+							<%if (pm.isNext() == true) {%>
+							<a href="<%=request.getContextPath()%>/Admin/adminMemberManage.do?page=<%=pm.getEndPage()+1%>&keyword=<%=pm.encoding(pm.getScri().getKeyword())%>">â–¶</a>
+							<%} %>
+						</div>
 					</div>
 				</form>
 				<form class="mainfrm2">
@@ -320,15 +172,15 @@
 						<tr id="table1">
 							<th><input type="checkbox" id="usercheck"></th>
 							<th>No</th>
-							<th>È¸¿ø±¸ºÐ</th>
-							<th>È¸¿ø¸í</th>
-							<th>Å»ÅðÀÏ</th>
+							<th>íšŒì›êµ¬ë¶„</th>
+							<th>íšŒì›ëª…</th>
+							<th>íƒˆí‡´ì¼</th>
 						</tr>
 						<tr>
 							<th><input type="checkbox" id="usercheck_all1"></th>
 							<td>1</td>
-							<td>ÀÏ¹ÝÈ¸¿ø</td>
-							<td>ÇÜ¹ö°Å</td>
+							<td>ì¼ë°˜íšŒì›</td>
+							<td>í–„ë²„ê±°</td>
 							<td>2021-02-11</td>
 						</tr>
 						<tr>
@@ -431,13 +283,13 @@
 						</tr>
 					</table>
 					<div id="divPaging">
-						<div>¢¸</div>
+						<div>â—€</div>
 						<div><a href="#"><b>1</b></a></div>
 						<div><a href="#">2</a></div>
 						<div><a href="#">3</a></div>
 						<div><a href="#">4</a></div>
 						<div><a href="#">5</a></div>
-						<div>¢º</div>
+						<div>â–¶</div>
 					</div>
 				</form>
 				<form class="mainfrm3">
@@ -445,23 +297,23 @@
 						<tr id="table1">
 							<th><input type="checkbox" id="usercheck"></th>
 							<th>No</th>
-							<th>È¸¿ø¸í</th>
-							<th>Á¦¸ñ</th>
-							<th>ÀÛ¼ºÀÏ</th>
-							<th>ºÐ·ù</th>
-							<th>»óÅÂ</th>
-							<th>´äº¯</th>
-							<th>±â´É</th>
+							<th>íšŒì›ëª…</th>
+							<th>ì œëª©</th>
+							<th>ìž‘ì„±ì¼</th>
+							<th>ë¶„ë¥˜</th>
+							<th>ìƒíƒœ</th>
+							<th>ë‹µë³€</th>
+							<th>ê¸°ëŠ¥</th>
 						</tr>
 						<tr>
 							<th><input type="checkbox" id="usercheck_all1"></th>
 							<td>1</td>
-							<td>ÇÜ¹ö°Å</td>
-							<td>°áÁ¦ ¿À·ù°¡ ³µ¾î¿ä</td>
+							<td>í–„ë²„ê±°</td>
+							<td>ê²°ì œ ì˜¤ë¥˜ê°€ ë‚¬ì–´ìš”</td>
 							<td>2021-01-25</td>
 							<td>*</td>
-							<td>´äº¯¿Ï·á</td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td>ë‹µë³€ì™„ë£Œ</td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -472,7 +324,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -483,7 +335,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -494,7 +346,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -505,7 +357,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -516,7 +368,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -527,7 +379,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -538,7 +390,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -549,7 +401,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -560,7 +412,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -571,7 +423,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -582,7 +434,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -593,7 +445,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -604,7 +456,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -615,25 +467,25 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><button type="button" id="btbtn">´äº¯ÇÏ±â</button></td>
+							<td><button type="button" id="btbtn">ë‹µë³€í•˜ê¸°</button></td>
 							<td></td>
 						</tr>
 					</table>
 					<div id="divPaging">
-						<div>¢¸</div>
+						<div>â—€</div>
 						<div><a href="#"><b>1</b></a></div>
 						<div><a href="#">2</a></div>
 						<div><a href="#">3</a></div>
 						<div><a href="#">4</a></div>
 						<div><a href="#">5</a></div>
-						<div>¢º</div>
+						<div>â–¶</div>
 					</div>
 				</form>
 				<div class="usermainpage4">
 					<form class="shfrm">
 						<div class="selectsh">
 							<select>
-								<option selected>È¸¿ø¸í</option>
+								<option selected>íšŒì›ëª…</option>
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
@@ -641,22 +493,22 @@
 					</form>
 				</div>
 				<div class="ftaplus">
-					<button type="button" id="ftaplusbtn">FAQ Ãß°¡ÇÏ±â<img src="<%= request.getContextPath() %>/webimage/´õÇÏ±â.png"></button>
+					<button type="button" id="ftaplusbtn">FAQ ì¶”ê°€í•˜ê¸°<img src="<%= request.getContextPath() %>/webimage/ë”í•˜ê¸°.png"></button>
 				</div>
 				<form class="mainfrm4">
 					<ul id="ul1">
 						<li style="width:10%;">No</li>
-						<li style="width:59.25%;">Á¦¸ñ</li>
-						<li style="width:10%;">ÀÛ¼ºÀÚ</li>
-						<li style="width:10%;">ÀÛ¼ºÀÏ</li>
-						<li style="width:10%;">Ä«Å×°í¸®</li>
+						<li style="width:59.25%;">ì œëª©</li>
+						<li style="width:10%;">ìž‘ì„±ìž</li>
+						<li style="width:10%;">ìž‘ì„±ì¼</li>
+						<li style="width:10%;">ì¹´í…Œê³ ë¦¬</li>
 					</ul>
 					<ul id="ul2">
 						<li>1</li>
-						<li>ÄÚÄ«ÄÝ¶ó¿¡¼­ ´Ü¸ÀÀÌ³ª¿ä</li>
-						<li>ÄÚÄ«ÄÝ¶ó</li>
+						<li>ì½”ì¹´ì½œë¼ì—ì„œ ë‹¨ë§›ì´ë‚˜ìš”</li>
+						<li>ì½”ì¹´ì½œë¼</li>
 						<li>2021-02-18</li>
-						<li>ÄÁÅÙÃ÷</li>
+						<li>ì»¨í…ì¸ </li>
 					</ul>
 					<ul>
 						<li></li>
@@ -722,31 +574,31 @@
 						<li></li>
 					</ul>
 					<div id="divPaging" style="margin-top:40px;">
-						<div>¢¸</div>
+						<div>â—€</div>
 						<div><a href="#"><b>1</b></a></div>
 						<div><a href="#">2</a></div>
 						<div><a href="#">3</a></div>
 						<div><a href="#">4</a></div>
 						<div><a href="#">5</a></div>
-						<div>¢º</div>
+						<div>â–¶</div>
 					</div>
 					<div class="ftacontent">
 						<div class="faqhead">
 							<img src="<%= request.getContextPath() %>/webimage/FAQ.png">
-							<div class="faqcont">ÄÚÄ«ÄÝ¶ó¿¡¼­ ´Ü¸ÀÀÌ³ª¿ä</div>
-							<div class="closeimg"><img src="<%= request.getContextPath() %>/webimage/´Ý±â.png"></div>
+							<div class="faqcont">ì½”ì¹´ì½œë¼ì—ì„œ ë‹¨ë§›ì´ë‚˜ìš”</div>
+							<div class="closeimg"><img src="<%= request.getContextPath() %>/webimage/ë‹«ê¸°.png"></div>
 						</div>
-						<div class="faqcontentmain">±¸¶óÀÓ ¤¾¤¾;</div>
+						<div class="faqcontentmain">êµ¬ë¼ìž„ ã…Žã…Ž;</div>
 					</div>
-					<div class="cathead">Ä«Å×°í¸®</div>
+					<div class="cathead">ì¹´í…Œê³ ë¦¬</div>
 					<div class="ftacontent2">
 						<div class="faqhead">
 							<img src="<%= request.getContextPath() %>/webimage/FAQ.png">
 							<div class="faqcont"><input type="text"></div>
-							<div class="closeimg2"><img src="<%= request.getContextPath() %>/webimage/´Ý±â.png"></div>
+							<div class="closeimg2"><img src="<%= request.getContextPath() %>/webimage/ë‹«ê¸°.png"></div>
 						</div>
 						<div class="faqcontentmain"><input type="text"></div>
-						<div class="catgo"><button type="button">µî·Ï</button></div>
+						<div class="catgo"><button type="button">ë“±ë¡</button></div>
 					</div>
 				</form>
 			</article>

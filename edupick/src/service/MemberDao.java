@@ -1,6 +1,6 @@
 package service;
 
-import java.sql.Connection; 
+import java.sql.Connection;  
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -99,50 +99,7 @@ public class MemberDao {
 		return name;
 	}
 
-	//아이디 찾기
-//	public String findId(String mName, String mTel) {
-//		
-//		String id = null;
-//		
-//		try {
-//			String sql = "select mid from edupickmember where mname=? and mtel=?";
-//			pstmt = conn.prepareStatement(sql);
-//			pstmt.setString(1, mName);
-//			pstmt.setString(2, mTel);
-//			
-//			System.out.println("mName======="+mName);
-//			System.out.println("mTel========="+mTel);
-//			
-//			ResultSet rs = pstmt.executeQuery();
-//		
-//		}catch(SQLException e) {
-//			e.printStackTrace();
-//		}
-//		return id; 
-//	}
-//	public String findPwd(String mId, String mName, String mJumin) {
-//		
-//		String pwd = null;
-//		
-//		try {
-//			String sql = "select mpwd from edupickmember where mid=? and mname=? and mjumin=?";
-//			pstmt = conn.prepareStatement(sql);
-//			pstmt.setString(1, mId);
-//			pstmt.setString(2, mName);
-//			pstmt.setString(3, mJumin);
-//			
-//			System.out.println("mId======="+ mId);
-//			System.out.println("mName========="+ mName);
-//			System.out.println("mJumin========="+ mJumin);
-//			ResultSet rs = pstmt.executeQuery();
-//		
-//			
-//		
-//		}catch(SQLException e) {
-//			e.printStackTrace();
-//		}
-//		return pwd; 
-//	}
+
 //id 체크
 
 	public boolean checkId(String id){
@@ -156,18 +113,15 @@ public class MemberDao {
 					"select lid from licensee \r\n" + 
 					") where id= ?";
 					
-		//	"select mid from edupickmember where mid = ?";
+		
 					
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			
 			System.out.println("Id======="+ id);
 			ResultSet rs = pstmt.executeQuery();
+
 		
-//			if (rs.next()) {
-//				b = true;
-//			}
-//			
             b=rs.next();
 			System.out.println("b======="+ b);
 		}catch(SQLException e) {

@@ -1,4 +1,4 @@
-﻿.pagecode {
+.pagecode {
 	height:100px;
 	width:1430px;
 	position:relative;
@@ -28,13 +28,16 @@ li:nth-child(1) , li:nth-child(2) , li:nth-child(3) {
 }
 
 .userup {
-	position:relative;
-	top:-15px;
+	position:absolute;
+	top:90px;
 	left:1236px;
+	width:auto;
 }
 
-#clplus_3 {
-	position:relative;
-	top:45px;
-	right:50px;
-}
+.clplus{
+	 position:absolute;
+	 left:1105px;
+	 top:90px;
+	 width:200px;
+ }
+
