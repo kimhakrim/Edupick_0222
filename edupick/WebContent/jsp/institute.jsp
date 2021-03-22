@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import = "java.util.*" %>
+<%@ page import = "service.*" %>
+<%@ page import = "Domain.*" %>
  <%  
    String mName = (String)request.getAttribute("loginname");
    String lName = (String)request.getAttribute("loginname");
@@ -7,6 +10,9 @@
 <%  
 	String loginname = (String)session.getAttribute("loginname");
 %>    
+<% ArrayList<InstituteVo> alist = (ArrayList<InstituteVo>)request.getAttribute("alist");
+	PageMaker pm = (PageMaker)request.getAttribute("pm");
+%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -488,105 +494,20 @@
 							<td>학원 위치</td>
 							<td>최소수강비 ~ 최대수강비</td>
 							<td>과목나열</td>
-							<td>★★★★★</td>
+							<td>전화번호</td>
 						</tr>
+						
+						<%for(InstituteVo iv : alist){ %>
 						<tr>
-							<td>학원 대표 사진</td>
-							<td>학원명</td>
-							<td>학원 위치</td>
-							<td>최소수강비 ~ 최대수강비</td>
-							<td>과목나열</td>
-							<td>★★★★★</td>
+							<td><%=iv.getIfile() %></td>
+							<td><%=iv.getIname() %></td>
+							<td><%=iv.getIroadaddr() %>, <%=iv.getIdetailaddr() %></td>
+							<td><%=iv.getImin() %> ~ <%=iv.getImax() %></td>
+							<td><%=iv.getIsubjects() %></td>
+							<td><%=iv.getItel() %></td>
 						</tr>
-						<tr>
-							<td>학원 대표 사진</td>
-							<td>학원명</td>
-							<td>학원 위치</td>
-							<td>최소수강비 ~ 최대수강비</td>
-							<td>과목나열</td>
-							<td>★★★★★</td>
-						</tr>
-						<tr>
-							<td>학원 대표 사진</td>
-							<td>학원명</td>
-							<td>학원 위치</td>
-							<td>최소수강비 ~ 최대수강비</td>
-							<td>과목나열</td>
-							<td>★★★★★</td>
-						</tr>
-						<tr>
-							<td>학원 대표 사진</td>
-							<td>학원명</td>
-							<td>학원 위치</td>
-							<td>최소수강비 ~ 최대수강비</td>
-							<td>과목나열</td>
-							<td>★★★★★</td>
-						</tr>
-						<tr>
-							<td>학원 대표 사진</td>
-							<td>학원명</td>
-							<td>학원 위치</td>
-							<td>최소수강비 ~ 최대수강비</td>
-							<td>과목나열</td>
-							<td>★★★★★</td>
-						</tr>
+						<% }%>	
 					</table>
-					<button id="more" style="CURSOR: hand" onclick="if(story.style.display=='none')
-						{story.style.display='';more.innerText='접기'} 
-						else {story.style.display='none';more.innerText='더보기'}">더보기
-					</button>
-					<div id="story" style="display: none">
-						<p>
-						<table class="t2" border="3px solid black" width="800px" height="500px">
-							<tr>
-								<td>학원 대표 사진</td>
-								<td>학원명</td>
-								<td>학원 위치</td>
-								<td>최소수강비 ~ 최대수강비</td>
-								<td>과목나열</td>
-								<td>★★★★★</td>
-							</tr>
-							<tr>
-								<td>학원 대표 사진</td>
-								<td>학원명</td>
-								<td>학원 위치</td>
-								<td>최소수강비 ~ 최대수강비</td>
-								<td>과목나열</td>
-								<td>★★★★★</td>
-							</tr>
-							<tr>
-								<td>학원 대표 사진</td>
-								<td>학원명</td>
-								<td>학원 위치</td>
-								<td>최소수강비 ~ 최대수강비</td>
-								<td>과목나열</td>
-								<td>★★★★★</td>
-							</tr>
-							<tr>
-								<td>학원 대표 사진</td>
-								<td>학원명</td>
-								<td>학원 위치</td>
-								<td>최소수강비 ~ 최대수강비</td>
-								<td>과목나열</td>
-								<td>★★★★★</td>
-							</tr>
-							<tr>
-								<td>학원 대표 사진</td>
-								<td>학원명</td>
-								<td>학원 위치</td>
-								<td>최소수강비 ~ 최대수강비</td>
-								<td>과목나열</td>
-								<td>★★★★★</td>
-							</tr>
-							<tr>
-								<td>학원 대표 사진</td>
-								<td>학원명</td>
-								<td>학원 위치</td>
-								<td>최소수강비 ~ 최대수강비</td>
-								<td>과목나열</td>
-								<td>★★★★★</td>
-							</tr>
-						</table>
 					</div>
 				</div>
 			</article>

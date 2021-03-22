@@ -24,7 +24,7 @@
 				<div class="logdiv">¡Û¡Û¡Û(´Ô)</div>
 				<div class="logdiv2">
 				<a href="<%= request.getContextPath() %>/Common/main.do">Home</a>
-				<a href="#">·Î±×¾Æ¿ô</a>
+				<a href="<%= request.getContextPath() %>/Common/logout.do">·Î±×¾Æ¿ô</a>
 				</div>
 			</div>
 		</header>

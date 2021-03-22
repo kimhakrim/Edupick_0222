@@ -6,16 +6,16 @@
 		<meta charset="UTF-8">
 		<title>강의수정</title>
 		<!-- title 아이콘 -->
-		<link rel="shortcut icon" type="image/x-icon" href="titlelogo.png">
-		<link href="adminmain.css" rel="stylesheet" type="text/css" />
-		<link href="adminmembermanage.css" rel="stylesheet" type="text/css" />
-		<script src="jquery-3.5.1.min.js"></script>
-		<script src="admin.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="<%= request.getContextPath() %>/webimage/titlelogo.png">
+		<link href="<%= request.getContextPath() %>/css/adminmain.css" rel="stylesheet" type="text/css" />
+		<link href="<%= request.getContextPath() %>/css/adminmembermanage.css" rel="stylesheet" type="text/css" />
+		<script src="<%= request.getContextPath() %>/js/jquery-3.5.1.min.js"></script>
+		<script src="<%= request.getContextPath() %>/js/admin.js"></script>
 		<!-- 폰트 -->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-		<link href="admincouresmodify.css" rel="stylesheet" type="text/css" />
+		<link href="<%= request.getContextPath() %>/css/admincouresmodify.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<header>
@@ -24,7 +24,7 @@
 				<div class="logdiv">○○○(님)</div>
 				<div class="logdiv2">
 				<a href="에듀픽.html">Home</a>
-				<a href="#">로그아웃</a>
+				<a href="<%= request.getContextPath() %>/Common/logout.do">로그아웃</a>
 				</div>
 			</div>
 		</header>

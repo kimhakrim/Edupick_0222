@@ -1,25 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%  
+	String loginname = (String)session.getAttribute("loginname");
+%> 
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>상품관리</title>
 		<!-- title 아이콘 -->
-		<link rel="shortcut icon" type="image/x-icon" href="titlelogo.png">
-		<link href="adminmain.css" rel="stylesheet" type="text/css" />
-		<link href="adminmembermanage.css" rel="stylesheet" type="text/css" />
-		<script src="jquery-3.5.1.min.js"></script>
-		<script src="admin.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="<%= request.getContextPath() %>/webimage/titlelogo.png">
+		<link href="<%= request.getContextPath() %>/css/adminmain.css" rel="stylesheet" type="text/css" />
+		<link href="<%= request.getContextPath() %>/css/adminmembermanage.css" rel="stylesheet" type="text/css" />
+		<script src="<%= request.getContextPath() %>/js/jquery-3.5.1.min.js"></script>
+		<script src="<%= request.getContextPath() %>/js/admin.js"></script>
 	</head>
 	<body>
 		<header>
 			<div class="herdiv">
 				<div class="logodiv"><img src="edupick2.jpg"></div>
-				<div class="logdiv">○○○(님)</div>
+				<div class="logdiv"><%=loginname %>(님)</div>
 				<div class="logdiv2">
 				<a href="에듀픽.html">Home</a>
-				<a href="#">로그아웃</a>
+				<a href="<%= request.getContextPath() %>/Common/logout.do">로그아웃</a>
 				</div>
 			</div>
 		</header>
@@ -57,7 +61,7 @@
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
-						<div class="selectsh3"><img src="search.jpg"></div>
+						<div class="selectsh3"><img src="<%= request.getContextPath() %>/webimage/search.jpg"></div>
 					</form>
 				</div>
 				<div class="userup">
@@ -85,132 +89,7 @@
 							<td>2021-01-13</td>
 							<td><button type="button" id="btbtcl">보기</button></td>
 						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all2"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all3"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all4"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all5"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all6"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all7"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all8"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all9"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all10"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all11"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all12"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all13"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all14"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all15"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbtcl">보기</button></td>
-						</tr>
+						
 					</table>
 					<div id="divPaging">
 						<div>◀</div>
@@ -234,7 +113,7 @@
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
-						<div class="selectsh3"><img src="search.jpg"></div>
+						<div class="selectsh3"><img src="<%= request.getContextPath() %>/webimage/search.jpg"></div>
 					</form>
 				</div>
 				<div class="userup2">
@@ -266,160 +145,7 @@
 							<td>2020-11-01</td>
 							<td><button type="button" id="btbt99">보기</button></td>
 						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all2"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all3"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all4"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all5"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all6"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all7"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all8"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all9"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all10"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all11"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all12"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all13"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all14"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all15"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt99">보기</button></td>
-						</tr>
+						
 					</table>
 					<div id="divPaging">
 						<div>◀</div>
@@ -442,7 +168,7 @@
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
-						<div class="selectsh3"><img src="search.jpg"></div>
+						<div class="selectsh3"><img src="<%= request.getContextPath() %>/webimage/search.jpg"></div>
 					</form>
 				</div>
 				<div class="userup3">
@@ -474,160 +200,7 @@
 							<td>2021-02-22</td>
 							<td><button type="button" id="btbt88">보기</button></td>
 						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all2"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all3"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all4"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all5"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all6"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all7"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all8"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all9"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all10"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all11"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all12"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all13"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all14"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all15"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt88">보기</button></td>
-						</tr>
+						
 					</table>
 					<div id="divPaging">
 						<div>◀</div>
@@ -647,7 +220,7 @@
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
-						<div class="selectsh3"><img src="search.jpg"></div>
+						<div class="selectsh3"><img src="<%= request.getContextPath() %>/webimage/search.jpg"></div>
 					</form>
 				</div>
 				<div class="userup4">
@@ -675,132 +248,7 @@
 							<td>2021-02-22</td>
 							<td><button type="button" id="btbt77">보기</button></td>
 						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all2"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all3"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all4"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all5"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all6"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all7"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all8"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all9"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all10"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all11"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all12"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all13"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all14"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all15"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt77">보기</button></td>
-						</tr>
+						
 					</table>
 					<div id="divPaging">
 						<div>◀</div>
@@ -835,7 +283,7 @@
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
-						<div class="selectsh3"><img src="search.jpg"></div>
+						<div class="selectsh3"><img src="<%= request.getContextPath() %>/webimage/search.jpg"></div>
 					</form>
 				</div>
 				<div class="userup5">
@@ -867,160 +315,7 @@
 							<td>2021-02-22</td>
 							<td><button type="button" id="btbt66">보기</button></td>
 						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all2"></th>
-							<td></td>
-							<td></td>
-							<td>본글</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all3"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all4"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all5"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all6"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all7"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all8"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all9"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all10"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all11"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all12"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all13"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all14"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all15"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt66">보기</button></td>
-						</tr>
+						
 					</table>
 					<div id="divPaging">
 						<div>◀</div>
@@ -1040,7 +335,7 @@
 							</select>
 						</div>
 						<div class="selectsh2"><input size=30></div>
-						<div class="selectsh3"><img src="search.jpg"></div>
+						<div class="selectsh3"><img src="<%= request.getContextPath() %>/webimage/search.jpg"></div>
 					</form>
 				</div>
 				<div class="userup6">
@@ -1068,132 +363,7 @@
 							<td>2021-03-22</td>
 							<td><button type="button" id="btbt55">보기</button></td>
 						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all2"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all3"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all4"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all5"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all6"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all7"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all8"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all9"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all10"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all11"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all12"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all13"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all14"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
-						<tr>
-							<th><input type="checkbox" id="usercheck_all15"></th>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><button type="button" id="btbt55">보기</button></td>
-						</tr>
+						
 					</table>
 					<div id="divPaging">
 						<div>◀</div>

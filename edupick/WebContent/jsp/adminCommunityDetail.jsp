@@ -6,12 +6,12 @@
 		<meta charset="UTF-8">
 		<title>Ä¿¹Â´ÏÆ¼»ó¼¼º¸±â</title>
 		<!-- title ¾ÆÀÌÄÜ -->
-		<link rel="shortcut icon" type="image/x-icon" href="titlelogo.png">
-		<link href="adminmain.css" rel="stylesheet" type="text/css" />
-		<link href="adminmembermanage.css" rel="stylesheet" type="text/css" />
-		<script src="jquery-3.5.1.min.js"></script>
-		<script src="admin.js"></script>
-		<link href="admincommunitydetail.css" rel="stylesheet" type="text/css" />
+		<link rel="shortcut icon" type="image/x-icon" href="<%= request.getContextPath() %>/webimage/titlelogo.png">
+		<link href="<%= request.getContextPath() %>/css/adminmain.css" rel="stylesheet" type="text/css" />
+		<link href="<%= request.getContextPath() %>/css/adminmembermanage.css" rel="stylesheet" type="text/css" />
+		<script src="<%= request.getContextPath() %>/js/jquery-3.5.1.min.js"></script>
+		<script src="<%= request.getContextPath() %>js/admin.js"></script>
+		<link href="<%= request.getContextPath() %>/css/admincommunitydetail.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<header>
@@ -20,7 +20,7 @@
 				<div class="logdiv">¡Û¡Û¡Û(´Ô)</div>
 				<div class="logdiv2">
 				<a href="¿¡µàÇÈ.html">Home</a>
-				<a href="#">·Î±×¾Æ¿ô</a>
+				<a href="<%= request.getContextPath() %>/Common/logout.do">·Î±×¾Æ¿ô</a>
 				</div>
 			</div>
 		</header>

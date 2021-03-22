@@ -4,21 +4,29 @@ public class InstituteVo {
 
 	private int iidx;
 	private String iname;
-	private String iaddr;
+	private String ipostcode;
+	private String iroadaddr;
+	private String ijibunaddr;
+	private String idetailaddr;
+	private String iextraaddr;
 	private String itel;
 	private String imin;
 	private String imax;
 	private String isubjects;
 	private String ineeds;
 	private String iintroduce;
-	private boolean iimage;
-	private int icommend;
-	private int idecaommend;
+	private String ifile;
 	private String idelyn;
 	
 	
 	
 	
+	public String getIfile() {
+		return ifile;
+	}
+	public void setIfile(String ifile) {
+		this.ifile = ifile;
+	}
 	public int getIidx() {
 		return iidx;
 	}
@@ -31,12 +39,7 @@ public class InstituteVo {
 	public void setIname(String iname) {
 		this.iname = iname;
 	}
-	public String getIaddr() {
-		return iaddr;
-	}
-	public void setIaddr(String iaddr) {
-		this.iaddr = iaddr;
-	}
+	
 	public String getItel() {
 		return itel;
 	}
@@ -73,29 +76,42 @@ public class InstituteVo {
 	public void setIintroduce(String iintroduce) {
 		this.iintroduce = iintroduce;
 	}
-	public boolean isIimage() {
-		return iimage;
-	}
-	public void setIimage(boolean iimage) {
-		this.iimage = iimage;
-	}
-	public int getIcommend() {
-		return icommend;
-	}
-	public void setIcommend(int icommend) {
-		this.icommend = icommend;
-	}
-	public int getIdecaommend() {
-		return idecaommend;
-	}
-	public void setIdecaommend(int idecaommend) {
-		this.idecaommend = idecaommend;
-	}
+	
 	public String getIdelyn() {
 		return idelyn;
 	}
 	public void setIdelyn(String idelyn) {
 		this.idelyn = idelyn;
+	}
+	public String getIpostcode() {
+		return ipostcode;
+	}
+	public void setIpostcode(String ipostcode) {
+		this.ipostcode = ipostcode;
+	}
+	public String getIroadaddr() {
+		return iroadaddr;
+	}
+	public void setIroadaddr(String iroadaddr) {
+		this.iroadaddr = iroadaddr;
+	}
+	public String getIjibunaddr() {
+		return ijibunaddr;
+	}
+	public void setIjibunaddr(String ijibunaddr) {
+		this.ijibunaddr = ijibunaddr;
+	}
+	public String getIdetailaddr() {
+		return idetailaddr;
+	}
+	public void setIdetailaddr(String idetailaddr) {
+		this.idetailaddr = idetailaddr;
+	}
+	public String getIextraaddr() {
+		return iextraaddr;
+	}
+	public void setIextraaddr(String iextraaddr) {
+		this.iextraaddr = iextraaddr;
 	}
 	
 }

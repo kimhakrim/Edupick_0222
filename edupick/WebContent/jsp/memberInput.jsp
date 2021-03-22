@@ -123,13 +123,15 @@
 									<span>*</span>우편번호
 								</td>
                                 <td>
-									<input type="text" id="sample4_postcode" name="sample4_postcode"  readonly placeholder="우편번호">
-                         			<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
-                         			<input type="text" id="sample4_roadAddress" name="sample4_roadAddress" readonly placeholder="도로명주소">
-                          			<input type="text" id="sample4_jibunAddress" name="sample4_jibunAddress" readonly placeholder="지번주소"><br>
-                          			<span id="guide" name="guide" style="color:#999;display:none"></span>
-                          			<input type="text" id="sample4_detailAddress" name="sample4_detailAddress" placeholder="상세주소">                       																
-                           			<input type="text" id="sample4_extraAddress" name="sample4_extraAddress" placeholder="참고항목">
+                                	
+										<input type="text" id="sample4_postcode" name="sample4_postcode"  readonly placeholder="우편번호">
+                         				<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
+                         				<input type="text" id="sample4_roadAddress" name="sample4_roadAddress" readonly placeholder="도로명주소">
+                          				<input type="text" id="sample4_jibunAddress" name="sample4_jibunAddress" readonly placeholder="지번주소"><br>
+                          				<span id="guide" name="guide" style="color:#999;display:none"></span>
+                          				<input type="text" id="sample4_detailAddress" name="sample4_detailAddress" placeholder="상세주소">                       																
+                           				<input type="text" id="sample4_extraAddress" name="sample4_extraAddress" placeholder="참고항목">
+                               		
                                 </td>
 							</tr>
 							<tr>

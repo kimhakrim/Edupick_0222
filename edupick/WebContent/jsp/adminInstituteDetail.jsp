@@ -5,16 +5,16 @@
 	<head>
 		<title>ÇÐ¿ø»ó¼¼</title>
 		<!-- title ¾ÆÀÌÄÜ -->
-		<link rel="shortcut icon" type="image/x-icon" href="titlelogo.png">
+		<link rel="shortcut icon" type="image/x-icon" href="<%= request.getContextPath() %>/webimage/titlelogo.png">
 		<!-- ÆùÆ® -->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-		<link href="adminmain.css" rel="stylesheet" type="text/css" />
-		<link href="adminmembermanage.css" rel="stylesheet" type="text/css" />
-		<script src="jquery-3.5.1.min.js"></script>
-		<script src="admin.js"></script>
-		<link href="admininstitutedetail.css" rel="stylesheet" type="text/css" />
+		<link href="<%= request.getContextPath() %>/css/adminmain.css" rel="stylesheet" type="text/css" />
+		<link href="<%= request.getContextPath() %>/css/adminmembermanage.css" rel="stylesheet" type="text/css" />
+		<script src="<%= request.getContextPath() %>/js/jquery-3.5.1.min.js"></script>
+		<script src="<%= request.getContextPath() %>/js/admin.js"></script>
+		<link href="<%= request.getContextPath() %>/css/admininstitutedetail.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<header>
@@ -23,7 +23,7 @@
 				<div class="logdiv">¡Û¡Û¡Û(´Ô)</div>
 				<div class="logdiv2">
 				<a href="¿¡µàÇÈ.html">Home</a>
-				<a href="#">·Î±×¾Æ¿ô</a>
+				<a href="<%= request.getContextPath() %>/Common/logout.do">·Î±×¾Æ¿ô</a>
 				</div>
 			</div>
 		</header>
