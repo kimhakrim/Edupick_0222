@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%  
+	String loginname = (String)session.getAttribute("loginname");
+%> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +30,7 @@
 				</a>
 			</div>
 			<div class="logoutdiv">
-				○○○(님) <a href="#">로그아웃</a><img src="<%= request.getContextPath() %>/webimage/알림.png" style="width:10%; height:10%;">
+				<%=loginname %>(님) <a href="#">로그아웃</a><img src="<%= request.getContextPath() %>/webimage/알림.png" style="width:10%; height:10%;">
 			</div>
 			<div id="topmenumain">
 				<ul>

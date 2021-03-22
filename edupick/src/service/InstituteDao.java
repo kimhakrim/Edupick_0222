@@ -26,7 +26,20 @@ public InstituteDao() {
 public int InstituteInsert(String iName , String iPostCode, String iRoadAddr, String iJibunAddr, String iDetailAddr, String iExtraAddr, String iTel, String iMin, String iMax, String iCategory ,String iSubjects, String iNeeds, String iIntroduce ,String iFile) {
 	int exec = 0;
 	
-
+	 	System.out.println("Diname--->"+ iName);
+	    System.out.println("DiPostCode--->" + iPostCode);
+	    System.out.println("Diroadaddr--->"+iRoadAddr);
+	    System.out.println("DiJibunaddr--->"+iJibunAddr);
+	    System.out.println("Didetailaddr--->"+iDetailAddr);
+	    System.out.println("Diextraaddr--->"+iExtraAddr);
+	    System.out.println("Ditel--->"+iTel);
+	    System.out.println("Dimin--->"+iMin);
+	    System.out.println("Dimax--->"+iMax);
+	    System.out.println("Dicategory--->"+iCategory);
+	    System.out.println("DiSubjects--->"+iSubjects);
+	    System.out.println("Dineeds--->"+iNeeds);
+	    System.out.println("Diintroduce--->"+iIntroduce);
+	    System.out.println("Difile--->"+iFile);	
 	
 	
 	 try {

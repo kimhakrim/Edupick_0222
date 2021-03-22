@@ -98,7 +98,20 @@ public class InstituteController extends HttpServlet {
 				String iIntroduce = multi.getParameter("iintroduce");
 				String iFile = multi.getParameter("ifile");
 				
-			    
+			    System.out.println("Ciname--->"+ iName);
+			    System.out.println("CiPostCode--->" + iPostCode);
+			    System.out.println("Ciroadaddr--->"+iRoadAddr);
+			    System.out.println("CiJibunaddr--->"+iJibunAddr);
+			    System.out.println("Cidetailaddr--->"+iDetailAddr);
+			    System.out.println("Ciextraaddr--->"+iExtraAddr);
+			    System.out.println("Citel--->"+iTel);
+			    System.out.println("Cimin--->"+iMin);
+			    System.out.println("Cimax--->"+iMax);
+			    System.out.println("Cicategory--->"+iCategory);
+			    System.out.println("CiSubjects--->"+iSubjects);
+			    System.out.println("Cineeds--->"+iNeeds);
+			    System.out.println("Ciintroduce--->"+iIntroduce);
+			    System.out.println("Cifile--->"+iFile);	
 				//2.Dao 객체를 생성 시켜서 넘어온 값은 입력한다.
 				
 				

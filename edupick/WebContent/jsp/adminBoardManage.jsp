@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%  
+	String loginname = (String)session.getAttribute("loginname");
+%> 
 <!DOCTYPE html>
 <html>
 	<head>
@@ -19,7 +22,7 @@
 		<header>
 			<div class="herdiv">
 				<div class="logodiv"><img src="edupick2.jpg"></div>
-				<div class="logdiv">○○○(님)</div>
+				<div class="logdiv"><%=loginname %>(님)</div>
 				<div class="logdiv2">
 				<a href="에듀픽.html">Home</a>
 				<a href="<%= request.getContextPath() %>>Common/logout.do">로그아웃</a>

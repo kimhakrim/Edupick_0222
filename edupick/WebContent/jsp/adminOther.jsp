@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%  
+	String loginname = (String)session.getAttribute("loginname");
+%> 
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,7 +20,7 @@
 		<header>
 			<div class="herdiv">
 				<div class="logodiv"><img src="edupick2.jpg"></div>
-				<div class="logdiv">¡Û¡Û¡Û(´Ô)</div>
+				<div class="logdiv"><%=loginname %>(´Ô)</div>
 				<div class="logdiv2">
 				<a href="¿¡µàÇÈ.html">Home</a>
 				<a href="<%= request.getContextPath() %>/Common/logout.do">·Î±×¾Æ¿ô</a>
